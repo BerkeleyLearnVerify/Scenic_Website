@@ -1,0 +1,8 @@
+supporters:
+  - name: Your company
+    logo: /resources/img/frontpage/company-logo.png
+    url: http://scenic-lang.org/
+maintainers:
+  - name: Your maintainer
+    logo: /resources/img/frontpage/shape.png
+    url: http://scenic-lang.org/

@@ -1,0 +1,110 @@
+// CODE
+//------------------------------------------------
+//------------------------------------------------
+
+.code-background {
+    background: #fdfdf7;
+}
+
+.code-background.dark {
+    background: $code-bg-color-dark;
+}
+
+.code-element {
+    margin-bottom: 20px;
+    position: relative;
+
+    .code-snippet-buttons {
+        position: absolute;
+        z-index: 60;
+        right: 0px;
+    }
+
+    pre {
+        margin: 0;
+    }
+
+    code {
+        // style that would be injected by hljs when JS is enabled
+        display: block;
+        font-family: 'Consolas';
+        border: none;
+        display: block;
+        overflow-x: auto;
+        padding: 0.5em;
+    }
+
+    .bar-code {
+        background: #B4BBBD;
+        text-align: center;
+        padding: 2px 0;
+        font-size: $font-size-medium;
+        font-weight: $font-bold;
+        min-height: 26px;
+        @include border-radius($border-radius-base $border-radius-base 0 0);
+
+    }
+}
+
+.code-element.dark {
+    code {
+        color: #adbac7;
+    }
+
+    .bar-code {
+        background: #404a4e;
+        color: #ccc;
+    }
+}
+
+.code-snippet-buttons {
+    @include display(flex);
+    @include flex-direction(row);
+    @include flex-wrap(wrap);
+    @include justify-content(flex-end);
+}
+
+.code-snippet-buttons.dark {
+
+    .code-snippet-button {
+        background: $code-bg-color-dark;
+        color: #fff;
+
+        &:hover {
+            background: $code-bg-color-dark-highlight;
+        }
+
+        a {
+            color: #fff;
+
+            &:hover {
+                color: #fff;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.code-snippet-area {
+    position: relative; // so we can position the buttons
+
+    &:hover {
+        // display the copy buttons on hover of the whole area
+        .code-snippet-buttons {
+            opacity: 0.95;
+
+            &:active {
+                transition: none;
+                opacity: 0.7;
+            }
+        }
+    }
+
+    .code-snippet-buttons {
+        opacity: 0; // default invisible until hover
+        transition: $base-transition;
+        position: absolute; // so we can position the buttons
+        right: 3px;
+        top: 5px;
+    }
+}

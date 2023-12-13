@@ -1,0 +1,62 @@
+title: The Scenic Programming Language
+
+scenicversion: "3.0.0b2"
+
+url: https://www.scenic-lang.org
+baseurl: ""
+markdown: kramdown
+highlighter:
+
+exclude:
+  - bundle-vendor/
+  - bin/
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - Procfile
+  - Rakefile
+
+future: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blog-detail
+      includeTOC: true
+
+# Custom collections
+collections:
+  install_tabs:
+    output: false
+  why_scenic_items:
+    output: false
+  scenic_use_case_items:
+    output: false
+  online_courses:
+    output: false
+  trainings:
+    output: false
+  events:
+    output: false
+  downloads:
+    output: true
+
+# Pagination
+pagination:
+  limit: false
+  per_page: 5
+  title_suffix: " - :num"
+  permalink: /:num/
+
+plugins:
+  - jekyll-redirect-from
+
+whitelist:
+  - jekyll-redirect-from
+
+sass:
+  style: compressed

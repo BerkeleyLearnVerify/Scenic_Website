@@ -1,0 +1,20 @@
+// BODY
+//------------------------------------------------
+//------------------------------------------------
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+  scroll-padding-top: 30vh;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html,
+body {
+  height: 90%;
+  margin: 0;
+}

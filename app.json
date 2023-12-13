@@ -1,0 +1,21 @@
+{
+  "name": "scenic-lang",
+  "description": "scenic-lang.org site",
+  "scripts": {
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    },
+    {
+      "url": "heroku/php"
+    }
+  ]
+}

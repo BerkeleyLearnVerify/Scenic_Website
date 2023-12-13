@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <title>{% if page.title %}{{ page.title }} | {% endif %}{{ site.title }}</title>
+    {% if page.title %}
+    <meta property="og:title" content="{{ page.title }}"/>
+    {% else %}
+    <meta property="og:title" content="{{ site.title }}"/>
+    {% endif %}
+    {% if page.description %}
+    <meta name="description" content="{{ page.description }}"/>
+    <meta property="og:description" content="{{ page.description }}"/>
+    {% endif %}
+    <meta name="twitter:card" content="summary"/>
+    {% if page.url %}
+    <meta property="og:url" content="{{ site.url }}{{ page.url }}"/>
+    {% endif %}
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <link rel="icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
+    <link rel="shortcut icon" type="image/png" href="{{ site.baseurl }}/resources/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ site.baseurl }}/resources/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ site.baseurl }}/resources/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ site.baseurl }}/resources/favicon-16x16.png">
+    <link rel="manifest" href="{{ site.baseurl }}/resources/site.webmanifest">
+    <link rel="mask-icon" href="{{ site.baseurl }}/resources/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#15a9ce">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+      integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+      crossorigin="anonymous" referrerpolicy="no-referrer">
+
+    <!-- Custom stylesheet -->
+    <link href="{{ site.baseurl }}/resources/css/unslider-dots.css" rel="stylesheet" type="text/css">
+    <link href="{{ site.baseurl }}/resources/css/unslider.css" rel="stylesheet" type="text/css">
+    {% if page.darkmodeCode %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/highlightjs-dark.css" type="text/css" />
+    {% else %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/highlightjs.css" type="text/css" />
+    {% endif %}
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/style.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/vendor/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/vendor/monokai.css" type="text/css" />
+    <link rel="stylesheet" href="{{ site.baseurl }}/resources/css/monospace.css" type="text/css" />
+
+    <!-- Typekit (should stay at top of page, do not move to footer)-->
+    <!--<script type="text/javascript" src="//use.typekit.net/abh3wgk.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script> -->
+
+    <!-- Atom feeds -->
+    <link rel="alternate" type="application/atom+xml" title="News Feed" href="{{ site.baseurl }}/feed/index.xml" />
+    <link rel="alternate" type="application/atom+xml" title="Blog Feed" href="{{ site.baseurl }}/feed/blog.xml" />

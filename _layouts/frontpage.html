@@ -1,0 +1,157 @@
+---
+---
+
+{% include headertop.html %}
+{% include headerbottom.html %}
+
+<div class="navigation-fade-screen"></div>
+<!-- Header -->
+  <header id="site-header" class="header-home">
+    <div class="header-background">
+      <div class="wrap">
+        <!-- Navigation -->
+        <nav class="navigation" role="menu">
+          <div class="navigation-bdand-vfill-lg hide-lg">
+            <!-- spacer to substitute for hidden logo, disappears below the large breakpoint -->
+          </div>
+          <a href="/" class="navigation-bdand show-lg">
+            <!-- show standard nav logo below the large breakpoint -->
+            <img src="/resources/img/frontpage/shape.png" alt=""/>
+          </a>
+          <div class="navigation-panel-button">
+            <i class="fa fa-bars"></i>
+          </div>
+          <ul class="navigation-menu">
+            {% for navItem in site.data.nav-header %}
+            <li class="navigation-menu-item">
+              <a href="{{navItem.url}}">{{navItem.title}}</a>
+            </li>
+            {% endfor %}
+          </ul>
+        </nav>
+      </div>
+      <div class="wrap flex-row-align-end">
+        <!-- Inner Text -->
+        <div class="col-lg-6">
+          <div class="inner-text">
+            <div class="hero-logo hide-lg"></div>
+            <h2>{{page.headerSubtitle}}</h2>
+            <div class="button-row__container">
+              <div class="button-row">
+                {% for release in site.data.scenic-releases %}
+                {% if release.category == "current_version" %}
+                <a href="https://github.com/BerkeleyLearnVerify/Scenic/releases/tag/v{{ release.version }}" class="button">
+                  Scenic {{ release.version }}
+                </a>
+                {% endif %}
+                {% endfor %}
+                <a href="https://github.com/BerkeleyLearnVerify/Scenic/releases" class="button">
+                  All Releases
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Scenic Main Resources -->
+    <div class="scenic-main-resources">
+      <div class="wrap">
+        <div class="resources">
+          <div class="get-started">
+            <a href="{{page.gettingStarted.mainUrl}}" class="button">{{page.gettingStarted.mainTitle | upcase}}</a>
+            <div class="sublinks">
+              <ul>
+                <li><a href="{{page.gettingStarted.subtitleLink}}">{{page.gettingStarted.subtitle}}</a></li>
+                {% for link in page.gettingStarted.links %}
+                  <li>•</li>
+                  <li><a href="{{link.url}}">{{link.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="learn-scenic">
+            <a href="{{page.apiDocs.mainUrl}}" class="button">{{page.apiDocs.mainTitle | upcase}}</a>
+            <div class="sublinks">
+              <ul>
+                <li><a href="{{page.apiDocs.subtitleLink}}">{{page.apiDocs.subtitle}}</a></li>
+                {% for link in page.apiDocs.links %}
+                  <li>•</li>
+                  <li><a href="{{link.url}}">{{link.title}}</a></li>
+                {% endfor %}
+              </ul>
+            </div>
+          </div>
+          <div class="scenic-brand-circle">
+            <div class="circle-solid">
+              <img src="/resources/img/frontpage/shape.png" alt="">
+              <div class="scenic-version">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+<main id="site-main">
+
+<!-- Why Scenic -->
+<section class="nutshell">
+  <div class="wrap">
+    <div class="scenic-items-grid">
+      <div class="items-menu">
+        {% for scenicItem in site.why_scenic_items %}
+        <div class="scenic-item scenic-item_why-scenic ">
+          <div class="scenic-item_content">
+            <h3>{{scenicItem.shortTitle}}</h3>
+            <p>{{scenicItem.shortDescription}}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Use cases -->
+<section class="nutshell">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>{{page.useCaseTitle}}</span></h2>
+    </div>
+    <div class="wrap">
+      <div class="section-text ta-c">
+        <p>{{page.useCaseIntroduction}}</p>
+      </div>
+    </div>
+    <div class="scenic-items-grid g-cols-3">
+    </div>
+  </div>
+</section>
+
+<!-- Supporters -->
+<section class="maintenance">
+  <div class="wrap">
+    <div class="heading-line">
+      <h2><span>{{site.data.common.texts.scenicMaintainersTitle}}</span></h2>
+    </div>
+    <ul class="maintained">
+      {% for maintainer in site.data.scenic-supporters.maintainers %}
+        <li><a href="{{maintainer.url}}"><img src="{{maintainer.logo}}" alt="{{maintainer.name}}"></a></li>
+      {% endfor %}
+    </ul>
+    <div class="heading-line">
+      <h2><span>{{site.data.common.texts.scenicSupportersTitle}}</span></h2>
+    </div>
+    <div class="supported">
+      {% for supporter in site.data.scenic-supporters.supporters %}
+        <a href="{{supporter.url}}"><img {% if supporter.wider-logo %} class="logo-with-wider-aspect-ratio" {% endif %} src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+</main>
+
+{% include footer.html %}

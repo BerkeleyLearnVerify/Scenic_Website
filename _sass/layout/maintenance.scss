@@ -1,0 +1,105 @@
+// MAINTENANCE
+//------------------------------------------------
+//------------------------------------------------
+
+#site-main > .maintenance {
+    padding-top: 10px;
+}
+
+.maintenance {
+    background: $gray-dark;
+
+    .heading-line {
+        h2 {
+            span {
+                background: $gray-dark;
+            }
+        }
+    }
+
+    h3 {
+        color: #fff;
+        text-align: center;
+        font-size: 0.9375rem;
+    }
+
+    .maintained {
+        @include display(flex);
+        @include align-items(center);
+        @include justify-content(center);
+        flex-wrap: wrap;
+        margin-bottom: 40px;
+
+        li {
+            &:not(:last-child) {
+                margin-right: 32px;
+            }
+
+            a {
+                img {
+                    height: 43px;
+                    width: auto;
+                    opacity: 0.3;
+                    transition: $base-transition;
+                }
+
+                &:hover {
+                    img {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+        @include bp(small) {
+            li:first-child {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .supported {
+      padding-top: 30px;
+      padding-left: 30px;
+      padding-right: 30px;
+        @include span-columns(10);
+        @include shift(1);
+        @include display(flex);
+        @include flex-direction(row);
+        @include align-items(center);
+        @include justify-content(space-evenly);
+        flex-wrap: wrap;
+
+        a {
+            margin-left: 10px;
+            margin-right: 10px;
+            margin-bottom: 8px;
+
+            img.logo-with-wider-aspect-ratio {
+                padding-top: 6px;
+                padding-bottom: 6px;
+            }
+
+            img {
+                height: 42px;
+                width: auto;
+                display: block;
+                opacity: 0.3;
+                transition: $base-transition;
+
+                @include bp(large) {
+                  margin: 5px;
+                }
+
+                @include bp(medium) {
+                  margin: 10px;
+                }
+
+            }
+            &:hover {
+                img {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
