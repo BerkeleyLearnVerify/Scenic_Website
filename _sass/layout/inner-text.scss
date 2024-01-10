@@ -6,7 +6,8 @@
     background-image: url('/resources/img/frontpage/shape.png');
     background-repeat: no-repeat;
     background-size: contain;
-    height: 100px;
+    background-position-x: center;
+    height: 250px;
     margin-bottom: 15px;
 }
 
@@ -27,6 +28,8 @@
         h1 {
             margin-bottom: 20px;
             font-size: 5.2rem;
+            font-family: $base-font-family;
+            color: #fff;
         }
 
         h2 {

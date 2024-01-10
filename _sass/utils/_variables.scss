@@ -4,17 +4,17 @@
 
 // Color
 //------------------------------------------------
-$brand-primary: #DC322F;
-$brand-secondary: #5c7a81;
+$brand-primary: #C49808;
+$brand-secondary: #003262;
 $brand-tertiary: #5CC6E4;
 $brand-tertiary-dotty: #E45C77;
 
 //-------------------------------------------------
 $gray-darkest: #002B36;
-$gray-darker: #002B36;
-$gray-dark: #073642;
+$gray-darker: #002144;
+$gray-dark: #001D39;
 $gray: #15414C;
-$gray-nutshell: $gray;
+$gray-nutshell: #003262;
 $gray-li: #244E58;
 $gray-light: #E5EAEA;
 $gray-lighter: #F0F3F3;
@@ -23,9 +23,9 @@ $std-link: #23aad1;
 $gray-heading: rgb(134, 161, 166);
 
 // $header-bg: #266270;
-$header-bg: #22525e;
+$header-bg: #3A7B9F;
 $banner-notice-bg: $gray-darkest;
-$banner-bg: #0c3540;
+$banner-bg: #001D39;
 
 //-------------------------------------------------
 $code-bg-color-dark: #22272e; // taken from github-dark-dimmed hljs theme
@@ -80,7 +80,7 @@ $hover-link-color: $brand-primary;
 // Border
 //------------------------------------------------
 $base-border-color-gray: $gray-light;
-$base-border-color-white: rgba(#fff, 0.14);
+$base-border-color-white: #FCB516;
 $base-border-gray: 1px solid $base-border-color-gray;
 $base-border-white: 1px solid $base-border-color-white;
 
