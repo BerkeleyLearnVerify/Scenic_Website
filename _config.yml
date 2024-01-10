@@ -3,7 +3,7 @@ title: The Scenic Programming Language
 scenicversion: "3.0.0b2"
 
 url: https://www.scenic-lang.org
-baseurl: ""
+baseurl: "/Scenic_Website"
 markdown: kramdown
 highlighter:
 
