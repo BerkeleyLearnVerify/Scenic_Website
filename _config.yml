@@ -34,7 +34,7 @@ collections:
     output: false
   why_scenic_items:
     output: false
-  scenic_use_case_items:
+  scenic_applications:
     output: false
   online_courses:
     output: false
