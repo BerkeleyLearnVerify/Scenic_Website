@@ -124,3 +124,7 @@ defaults:
 To access data from a custom collection refer to `site.<collection-name>`. The collection's name will be the name of it's directory without the underscore character. i.e.: to access the data inside `_downloads`, use `site.downloads`.
 
 Some of our data has been modelled as YAML files inside the `_data` folder. We generally do this for data that is used throughout the whole site. For example we do this for the navigation bar links.
+
+### Credits
+
+Credits to [scala-lang](https://github.com/scala/scala-lang) for the website layout. Scala is licensed under the [Apache License, Version 2.0](https://www.apache.org/licenses/LICENSE-2.0)

@@ -32,97 +32,11 @@ $(document).ready(function() {
         });
 });
 
-// Highlight
-$(document).ready(function() {
-    hljs.configure({
-      languages: ["scala", "bash"]
-    })
-    hljs.registerLanguage("scala", highlightDotty);
-    hljs.initHighlighting();
-});
 
 // Show Blog
 $(".hide").click(function() {
     $(".new-on-the-blog").hide();
     updatePointer();
-});
-
-//Tweet feed in frontpage
-$('#tweet-feed').tweetMachine('', {
-    backendScript: '/webscripts/ajax/getFromTwitter.php',
-    endpoint: 'statuses/user_timeline',
-    user_name: 'scala_lang',
-    include_retweets: true,
-    exclude_replies: false,
-    limit: 6,
-    pageLimit: 3,
-    autoRefresh: false,
-    animateIn: false,
-    tweetFormat: `
-    <div class="item-tweet">
-            <img src="" class="avatar" alt="">
-            <div class="tweet-text">
-              <div class="header-tweet">
-                <ul>
-                  <li class="user"><a href="" class="userLink"></a></li>
-                  <li class="username"><a href="" class="usernameLink"></a></li>
-                </ul>
-                <span class="date"></span>
-              </div>
-              <div class="main-tweet"></div>
-            </div>
-          </div>
-      `
-}, function(tweets, tweetsDisplayed) {
-    $('.slider-twitter').unslider({});
-});
-
-// Scaladex autocomplete search
-
-var scaladexUrlBase = 'https://index.scala-lang.org';
-
-function scaladexUrl(item) {
-  return scaladexUrlBase + "/" + item.organization + "/" + item.repository;
-}
-
-$('#scaladex-search').keypress(function(e){
-  var RETURN = 13;
-  if (e.which == RETURN ) {
-    e.stopImmediatePropagation();
-    e.preventDefault();
-    window.open(scaladexUrlBase + "/search?q=" + e.target.value);
-  }
-});
-
-$('#scaladex-search').autocomplete({
-    paramName: 'q',
-    serviceUrl: scaladexUrlBase + '/api/autocomplete',
-    dataType: 'json',
-    transformResult: function(response) {
-      return {
-        suggestions: $.map(response, function(dataItem) {
-          return {
-            value: dataItem.organization + " / " + dataItem.repository,
-            data: dataItem
-          };
-        })
-      };
-    },
-    noCache: true,
-    onSelect: function (suggestion) {
-      window.open(scaladexUrl(suggestion.data), '_blank');
-    },
-    formatResult: function(suggestion){
-      var item = suggestion.data;
-      var url = scaladexUrl(item);
-      var title = item.organization + " / " + item.repository;
-      return '<a href="' + url + '">' + '\n' +
-             '  <p>' + title + '</p>' + '\n' +
-             '  <span>'  + '\n' +
-             item.description
-             '  </span>'  + '\n' +
-             '</a>';
-    }
 });
 
 // TOC:
@@ -168,54 +82,6 @@ $(document).ready(function() {
         $("#result-container").hide();
       }
     });
-  }
-});
-
-// Scala in the browser
-$(document).ready(function() {
-  if ($("#scastie-textarea").length) {
-    var editor =
-      CodeMirror.fromTextArea(
-        document.getElementById("scastie-textarea"),
-        {
-          // lineNumbers: false,
-          matchBrackets: true,
-          theme: "monokai",
-          mode: "text/x-scala",
-          autoRefresh: true,
-          fixedGutter: false,
-          extraKeys: {
-            'Ctrl-Enter': 'run',
-            'Cmd-Enter': 'run'
-          }
-        }
-      );
-
-    editor.setSize("100%", ($("#scastie-code-container").height()));
-
-    var codeSnippet = "List(\"Hello\", \"World\").mkString(\"\", \", \", \"!\")";
-    editor.getDoc().setValue(codeSnippet);
-    editor.refresh();
-
-    function run(){
-      var scastieBaseUrl = "https://scastie.scala-lang.org";
-
-      $.ajax(
-        {
-          type: "POST",
-          url: scastieBaseUrl + '/scala-lang',
-          data: editor.getDoc().getValue(),
-          success: function(url) {
-            window.open(scastieBaseUrl + "/" + url);
-          },
-          // otherwise it's considered a popup
-          async: false
-        }
-      )
-    }
-
-    $('.btn-run').click(run);
-    CodeMirror.commands.run = run;
   }
 });
 
@@ -293,40 +159,6 @@ $(document).ready(function () {
     }
     $("#install-cs-setup-tabs").find('input[data-target=' + os + ']').prop("checked", true);
   }
-});
-
-$(document).ready(function () {
-  // set up automatic switching of code carousel
-  $(".code-carousel").each(function () {
-    var carousel = this;
-    var inputs = [];
-    $(carousel).children("input.code-carousel_control").each(function () {
-      inputs.push(this);
-    });
-
-    // if there is more than one section, set up automatic switching
-    if (inputs.length > 1) {
-
-      var cancelled = false;
-
-      var index = inputs.findIndex(input => input.checked);
-
-      // switch every 8 seconds while the page is visible and not cancelled
-      const intervalHandle = setInterval(() => {
-        if (!document.hidden && !cancelled) {
-          const nextIndex = (index + 1) % inputs.length;
-          inputs[nextIndex].checked = true;
-          index = nextIndex;
-        }
-      }, 8000);
-
-      carousel.addEventListener("click", function cancelTicker() {
-        carousel.removeEventListener("click", cancelTicker);
-        cancelled = true;
-        clearInterval(intervalHandle);
-      });
-    }
-  });
 });
 
 var image = { width: 1680, height: 1100 };
