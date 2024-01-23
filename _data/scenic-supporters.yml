@@ -1,8 +1,18 @@
 supporters:
-  - name: Your company
-    logo: /resources/img/frontpage/company-logo.png
-    url: http://scenic-lang.org/
-maintainers:
-  - name: Your maintainer
-    logo: /resources/img/frontpage/shape.png
-    url: http://scenic-lang.org/
+  - name: National Science Foundation
+    logo: resources/img/frontpage/nsf.jpg
+    url: https://www.nsf.gov/
+  - name: DARPA
+    logo: resources/img/frontpage/darpa.jpg
+    url: https://www.darpa.mil/
+  - name: Berkeley Deep Drive
+    logo: resources/img/frontpage/deepdrive.jpeg
+    url: https://deepdrive.berkeley.edu/
+  - name: iCyPhy
+    logo: resources/img/frontpage/icyphy.png
+    url: https://www.icyphy.org/
+
+# maintainers:
+#   - name: Your maintainer
+#     logo: resources/img/frontpage/shape.png
+#     url: http://scenic-lang.org/
