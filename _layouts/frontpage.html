@@ -11,10 +11,7 @@
       <div class="wrap">
         <!-- Navigation -->
         <nav class="navigation" role="menu">
-          <div class="navigation-bdand-vfill-lg hide-lg">
-            <!-- spacer to substitute for hidden logo, disappears below the large breakpoint -->
-          </div>
-          <a href="/" class="navigation-bdand show-lg">
+          <a href="{{ site.baseurl }}/" class="navigation-bdand">
             <!-- show standard nav logo below the large breakpoint -->
             <img src="{{ site.baseurl }}/resources/img/frontpage/shape.png" alt=""/>
           </a>
@@ -45,15 +42,17 @@
                 </a>
                 {% endif %}
                 {% endfor %}
-                <a href="https://github.com/BerkeleyLearnVerify/Scenic/releases" class="button">
-                  All Releases
+                <a href="https://github.com/BerkeleyLearnVerify/Scenic" class="button">
+                  GitHub
                 </a>
               </div>
             </div>
           </div>
         </div>
         <div class="col-lg-6">
-            <div class="hero-logo hide-lg"></div>
+            <!-- <div class="hero-logo "></div> -->
+            <iframe height="315" width="100%" src="https://www.youtube.com/embed/ORnBW7lBT9E?si=eQDiP68cxPyf9fUt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            
         </div>
       </div>
     </div>

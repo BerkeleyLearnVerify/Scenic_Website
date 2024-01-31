@@ -26,7 +26,6 @@
         }
 
         h1 {
-            margin-bottom: 20px;
             font-size: 5.2rem;
             font-family: $base-font-family;
             color: #fff;
@@ -34,7 +33,7 @@
 
         h2 {
             font-family: $base-font-family;
-            font-size: min(max(1.6vw, 1.2rem), 1.31rem);
+            font-size: min(max(1.6vw, 1.3rem), 1.31rem);
             line-height: min(max(1.5vw, 2rem), 2.15rem);
             color: #fff;
             margin-bottom: $padding-medium;
