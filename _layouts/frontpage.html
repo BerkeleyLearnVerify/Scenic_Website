@@ -6,120 +6,183 @@
 
 <div class="navigation-fade-screen"></div>
 <!-- Header -->
-  <header id="site-header" class="header-home">
-    <div class="header-background">
-      <div class="wrap">
-        <!-- Navigation -->
-        <nav class="navigation" role="menu">
-          <a href="{{ site.baseurl }}/" class="navigation-bdand">
-            <!-- show standard nav logo below the large breakpoint -->
-            <img src="{{ site.baseurl }}/resources/img/frontpage/shape.png" alt=""/>
-          </a>
-          <div class="navigation-panel-button">
-            <i class="fa fa-bars"></i>
-          </div>
-          <ul class="navigation-menu">
-            {% for navItem in site.data.nav-header %}
-            <li class="navigation-menu-item">
-              <a href="{{navItem.url}}">{{navItem.title}}</a>
-            </li>
-            {% endfor %}
-          </ul>
-        </nav>
-      </div>
-      <div class="wrap flex-row-align-end">
-        <!-- Inner Text -->
-        <div class="col-lg-6">
-          <div class="inner-text">
-            <h1>{{page.headerTitle}}</h1>
-            <h2>{{page.headerSubtitle}}</h2>
-            <div class="button-row__container">
-              <div class="button-row">
-                {% for release in site.data.scenic-releases %}
-                {% if release.category == "current_version" %}
-                <a href="https://github.com/BerkeleyLearnVerify/Scenic/releases/tag/v{{ release.version }}" class="button">
-                  Scenic {{ release.version }}
-                </a>
-                {% endif %}
-                {% endfor %}
-                <a href="https://github.com/BerkeleyLearnVerify/Scenic" class="button">
-                  GitHub
-                </a>
-              </div>
+<header id="site-header" class="header-home">
+  <div class="header-background">
+    <div class="wrap">
+      <!-- Navigation -->
+      <nav class="navigation" role="menu">
+        <a href="{{ site.baseurl }}/" class="navigation-bdand">
+          <!-- show standard nav logo below the large breakpoint -->
+          <img src="{{ site.baseurl }}/resources/img/frontpage/shape.png" alt="" />
+        </a>
+        <div class="navigation-panel-button">
+          <i class="fa fa-bars"></i>
+        </div>
+        <ul class="navigation-menu">
+          {% for navItem in site.data.nav-header %}
+          <li class="navigation-menu-item">
+            <a href="{{navItem.url}}">{{navItem.title}}</a>
+          </li>
+          {% endfor %}
+        </ul>
+      </nav>
+    </div>
+    <div class="wrap flex-row-align-end">
+      <!-- Inner Text -->
+      <div class="col-lg-6">
+        <div class="inner-text">
+          <h1>{{page.headerTitle}}</h1>
+          <h2>{{page.headerSubtitle}}</h2>
+          <div class="button-row__container">
+            <div class="button-row">
+              {% for release in site.data.scenic-releases %}
+              {% if release.category == "current_version" %}
+              <a href="https://github.com/BerkeleyLearnVerify/Scenic/releases/tag/v{{ release.version }}"
+                class="button">
+                Scenic {{ release.version }}
+              </a>
+              {% endif %}
+              {% endfor %}
+              <a href="https://github.com/BerkeleyLearnVerify/Scenic" class="button">
+                GitHub
+              </a>
             </div>
           </div>
         </div>
-        <div class="col-lg-6">
-            <!-- <div class="hero-logo "></div> -->
-            <iframe height="315" width="100%" src="https://www.youtube.com/embed/ORnBW7lBT9E?si=eQDiP68cxPyf9fUt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-            
-        </div>
+      </div>
+      <div class="col-lg-6">
+        <!-- <div class="hero-logo "></div> -->
+        <iframe height="315" width="100%" src="https://www.youtube.com/embed/ORnBW7lBT9E?si=eQDiP68cxPyf9fUt"
+          title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowfullscreen></iframe>
+
       </div>
     </div>
-  </header>
+  </div>
+</header>
 
 
 <main id="site-main">
 
-<!-- Why Scenic -->
-<section class="nutshell">
-  <div class="wrap">
-    <div class="scenic-items-grid">
-      <div class="items-menu">
-        {% for scenicItem in site.why_scenic_items %}
-        <div class="scenic-item scenic-item_why-scenic ">
-          <div class="scenic-item_content">
-            <h3>{{scenicItem.shortTitle}}</h3>
-            <p>{{scenicItem.shortDescription}}</p>
-          </div>
-        </div>
-        {% endfor %}
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- Use cases -->
-<section class="nutshell">
-  <div class="wrap">
-    <div class="heading-line">
-      <h2><span>{{page.useCaseTitle}}</span></h2>
-    </div>
-    <div class="wrap">
-      <div class="section-text ta-c">
-        <p>{{page.useCaseIntroduction}}</p>
-      </div>
-    </div>
+  <!-- Why Scenic -->
+  <section class="nutshell">
     <div class="wrap">
       <div class="scenic-items-grid">
-        <div class="items-menu-border">
-          {% for scenicItem in site.scenic_applications %}
-            <div class="scenic-item scenic-item_why-scenic">
-              <div class="scenic-item_content">
-                <h3>{{scenicItem.shortTitle}}</h3>
-                <p>{{scenicItem.shortDescription}}</p>
-              </div>
+        <div class="items-menu">
+          {% for scenicItem in site.why_scenic_items %}
+          <div class="scenic-item scenic-item_why-scenic ">
+            <div class="scenic-item_content">
+              <h3>{{scenicItem.shortTitle}}</h3>
+              <p>{{scenicItem.shortDescription}}</p>
             </div>
+          </div>
           {% endfor %}
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- Supporters -->
-<section class="maintenance">
-  <div class="wrap">
-    <div class="heading-line">
-      <h2><span>{{site.data.common.texts.scenicSupportersTitle}}</span></h2>
+  <!-- Use Cases -->
+  <section class="nutshell-head">
+    <div class="wrap">
+      <div class="heading-line">
+        <h2><span>{{page.useCaseTitle}}</span></h2>
+      </div>
+      <div class="wrap">
+        <div class="section-text ta-c">
+          <p>{{page.useCaseIntroduction}}</p>
+        </div>
+      </div>
     </div>
-    <div class="supported">
-      {% for supporter in site.data.scenic-supporters.supporters %}
-        <a href="{{supporter.url}}"><img {% if supporter.wider-logo %} class="logo-with-wider-aspect-ratio" {% endif %} src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
-      {% endfor %}
+  </section>
+
+  <section class="nutshell">
+    <div class="wrapper row">
+      <div class="col-5 flex center">
+        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/driving.png')"></div>
+      </div>
+      <div class="col-7">
+        <h3>{{site.scenic_applications[0].shortTitle}}</h3>
+        <p>{{site.scenic_applications[0].shortDescription}}</p>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
+
+  <section class="nutshell2">
+    <div class="wrapper row">
+      <div class="col-7">
+        <h3>{{site.scenic_applications[1].shortTitle}}</h3>
+        <p>{{site.scenic_applications[1].shortDescription}}</p>
+      </div>
+      <div class="col-5 flex center">
+        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/xplane.png')"></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="nutshell">
+    <div class="wrapper row">
+      <div class="col-5 flex center">
+        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/webots.png')"></div>
+      </div>
+      <div class="col-7">
+        <h3>{{site.scenic_applications[2].shortTitle}}</h3>
+        <p>{{site.scenic_applications[2].shortDescription}}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="nutshell2">
+    <div class="wrapper row">
+      <div class="col-7">
+        <h3>{{site.scenic_applications[3].shortTitle}}</h3>
+        <p>{{site.scenic_applications[3].shortDescription}}</p>
+      </div>
+      <div class="col-5 flex center">
+        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/unity.png')"></div>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Talks/Papers -->
+  <section class="nutshell-head">
+    <div class="wrap">
+      <div class="heading-line">
+        <h2><span>{{page.papersTitle}}</span></h2>
+      </div>
+      <div class="wrap">
+        <div class="scenic-items-grid g-cols-1">
+          <div class="items-menu">
+            <div class="scenic-item">
+              <div class="scenic-item_content">
+                <ul>
+                  <li><p><a href="https://scenic-lang.readthedocs.io/en/latest/publications.html">Publications Using Scenic</a></p></li>
+                  <li><p><a href="https://berkeleylearnverify.github.io/VerifiedAIWebsite/#talks">Research and Talks Using VerifAI</a></p></li>
+                  <li><p><a href="https://uva-mcps-lab.github.io/RV21/paper10.1.html">Formal Analysis of AI-Based Autonomy: From Modeling to Runtime Assurance RV '21 (Tutorial Video Included)</a></p></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Supporters -->
+  <section class="maintenance">
+    <div class="wrap">
+      <div class="heading-line">
+        <h2><span>{{site.data.common.texts.scenicSupportersTitle}}</span></h2>
+      </div>
+      <div class="supported">
+        {% for supporter in site.data.scenic-supporters.supporters %}
+        <a href="{{supporter.url}}"><img {% if supporter.wider-logo %} class="logo-with-wider-aspect-ratio" {% endif %}
+            src="{{supporter.logo}}" alt="{{supporter.name}}"></a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
 </main>
 
 {% include footer.html %}
