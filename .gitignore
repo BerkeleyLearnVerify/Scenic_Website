@@ -1,7 +1,9 @@
 _site/
 .DS_Store
 /bundle-vendor/bundle/
-vendor/
+resources/css/vendor/
+resources/js/vendor/
+vendor/bundle
 /.jekyll-metadata
 .bundle
 /.idea
