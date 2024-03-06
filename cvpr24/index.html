@@ -1,196 +1,292 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
 
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-    <meta name="description" content="CVPR23 Tutorial - Object localization for free">
-    <meta name="author" content="Oriane Siméoni">
-    <link rel="image_src" href="img/CVPR2023.png" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="description"
+    content="CVPR24 Tutorial - SCENIC: An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy">
+  <meta name="author" content="Daniel He">
 
-    <!-- Meta properties -->
-    <meta property="og:title" content="CVPR23 Tutorial - Object localization for free">
-    <meta property="og:description" content="Presentation of the CVPR23 tutorial">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://osimeoni.github.io/object-localization-for-free//">
-    <meta property="og:image" content="img/CVPR2023.png"/>
+  <!-- Meta properties -->
+  <meta property="og:title"
+    content="CVPR24 Tutorial - SCENIC: An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy">
+  <meta property="og:description" content="Presentation of the CVPR24 tutorial">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://scenic-lang.org/cvpr24/">
 
-    <title>CVPR23 Tutorial - Object localization for free</title>
+  <title>CVPR24 Tutorial - SCENIC: An Open-Source Probabilistic Programming System for Data Generation and Safety in
+    AI-Based Autonomy</title>
 
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom fonts for this template -->
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
-    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+  <!-- Custom fonts for this template -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+    rel="stylesheet" type="text/css">
 
-    <!-- Custom styles for this template -->
-    <link href="main.css" rel="stylesheet">
+  <!-- Custom styles for this template -->
+  <link href="main.css" rel="stylesheet">
 
-    <!-- Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-  </head>
+</head>
 
-  <body>
+<body>
 
-    <!-- Bootstrap core JavaScript -->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
 
-    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
 
-    
-    <section id="title">
+
+  <section id="title">
     <div class="container py-7 bg-orange">
-        <h1 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
-            Object localization for free:<br>
-            Going beyond self-supervised learning
-        </h1>
-        <br>
-        <h2 class="text-sm text-dark text-center">
-          CVPR 2023 Tutorial
-        </h2>
-        <p class="text-sm text-dark text-center">
-          Monday, June 19th 2023 - Vancouver<br>
-          <a href="https://youtu.be/AxhjGR1WIv8"><i class="fa fa-youtube-play" style="font-size:48px;color:red"></i></a>
-        </p>
+      <h1 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        SCENIC:<br>
+        An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy
+      </h1>
+      <br>
+      <h2 class="text-sm text-dark text-center">
+        CVPR 2024 Tutorial
+      </h2>
+      <!-- <p class="text-sm text-dark text-center">
+          Monday, June 19th 2024 - Seattle<br>
+          <a href="https://youtu.be/.../"><i class="fa fa-youtube-play" style="font-size:48px;color:red"></i></a>
+        </p> -->
     </div>
-    </section>
+  </section>
 
-    <section id="bod">
-    <div class="container bg-orange" >								
-        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
-            Organizers
-        </h2>
-        <br>
-        <div class="row text-center">
-            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
-                <div class="our-bod">
-                    <div class="single-bod">
-                        <a href="https://osimeoni.github.io">
-                            <img src="img/OS-crop.png" class="img-fluid cimg" alt="">
-                            <h3 class="text-bold text-name">Oriane Siméoni</h3>
-                        </a>
-                        <p class="text-institute">valeo.ai</p>
-                    </div>
-                </div>
-            </div><!--- END COL -->	
-            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInLeft;">
-                <div class="our-bod">
-                    <div class="single-bod">
-                        <a href="https://weidixie.github.io/">
-                            <img src="https://weidixie.github.io/images/weidi_photo.png" class="img-fluid" alt="">
-                            <h3 class="text-bold text-name">Weidi Xie</h3>
-                        </a>
-                        <p class="text-institute">Shanghai Jiao Tong University</p>
-                    </div>						
-                </div>
-            </div><!--- END COL -->	
-            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInLeft;">
-                <div class="our-bod">
-                    <div class="single-bod">
-                        <a href="https://tkipf.github.io/">
-                            <img src="https://tkipf.github.io/images/photo.jpg" class="img-fluid" alt="">
-                            <h3 class="text-bold text-name">Thomas Kipf</h3>
-                        </a>
-                        <p class="text-institute">Google DeepMind</p>
-                    </div>					
-                </div>
-            </div><!--- END COL -->
-            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeInLeft;">
-                <div class="our-bod">
-                    <div class="single-bod">
-                        <a href="https://ptrckprz.github.io/">
-                            <img src="https://ptrckprz.github.io/images/pat_closup.jpg" class="img-fluid" alt="">
-                            <h3 class="text-bold text-name">Patrick Pérez</h3>
-                        </a>
-                        <p class="text-institute">valeo.ai</p>
-                    </div>					
-                </div>
-            </div><!--- END COL -->	  
-        </div><!--- END ROW -->			
-    </div><!--- END CONTAINER -->
-    </section>
-
-    <div class="container py-7 bg-orange">
+  <section id="bod">
+    <div class="container bg-orange">
       <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
-          Summary
+        Organizers/Speakers
       </h2>
       <br>
-      <p class="text-sm text-dark centered-aligned">
-        Object localization in images is a key problem in a wide range of application domains that are embedded in critical settings such as self-driving vehicles or healthcare. However, most efficient solutions able to perform an object localization task follow the standard object detection and semantic segmentation frameworks, meaning that they require large amounts of annotated data for training. Different heuristics and tools can now assist and enhance human annotators, however manual annotation remains a largely heavy and expensive process. Moreover, perception models based on annotations enter a dependence circle of additional annotations for every new object class to detect or new external conditions to cover, e.g. in/outdoor, different times of the day, weathers. Such models struggle in dealing with our open complex world that is evolving continuously.
-      </p>
-      <p class="text-sm text-dark centered-aligned">
-        Recent works have shown exciting prospects of <i>avoiding annotations altogether</i> by <b>(1)</b> leveraging self-supervised features, <b>(2)</b> building self-supervised object-centric objectives and <b>(3)</b> combining different modalities. In this context, we propose a half-day tutorial in which we will provide an in-depth coverage of different angles on performing/building-upon object localization with no human supervision.
-      </p>
+      <div class="row text-center">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Sanjit_Seshia.webp" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Sanjit Seshia</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Daniel_Fremont.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Daniel Fremont</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Edward_Kim.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Edward Kim</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Jinkyu_Kim.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Jinkyu Kim</h3>
+              <p class="text-institute">Korea University, South Korea</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Necmiye_Ozay.webp" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Necmiye Ozay</h3>
+              <p class="text-institute">University of Michigan, Ann Arbor</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Parasara Sridhar Duggirala.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Parasara Sridhar Duggirala</h3>
+              <p class="text-institute">University of North Carolina, Chapel Hill</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Hazem_Torfah.png" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Hazem Torfah</h3>
+              <p class="text-institute">Chalmers University of Technology, Sweden</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Kimin_Lee.png" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Kimin Lee</h3>
+              <p class="text-institute">School of AI, KAIST, South Korea</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Marcell_Vazequez_Chanlatte.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Marcell Vazquez-Chanlatte</h3>
+              <p class="text-institute">Nis-san's Alliance Innovation Lab, Silicon Valley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </section>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Summary
+    </h2>
+    <br>
+    <p class="text-sm text-dark centered-aligned">
+      Today's autonomous systems rely heavily on the use of machine learning components trained on large
+      amounts of data. Even so, it is expensive to collect relevant data and test these systems in the real world
+      in a manner that captures typical data distributions and also covers edge cases. Therefore, simulators are
+      widely adopted in the robotics and computer vision community to train, test, and debug autonomous and
+      semi-autonomous systems. However, working directly with simulators can be too low-level and problem-
+      pecific. To support the design lifecycle of autonomous/semi-autonomous systems, one needs to raise the
+      level of abstraction above individual simulators and provide a formal framework for world modeling. Such a
+      world model can help reason about the safety of a system and facilitate data generation and sim-to-real vali-
+      dation, as well as help to interpret, validate, share, or re-use training and test scenarios across the community.
+    </p>
+    <p class="text-sm text-dark centered-aligned">
+      The objective of this tutorial is to introduce SCENIC, an open-source, domain-specific probabilistic
+      programming language for world modeling that addresses the above needs. SCENIC is designed to model and
+      generate interactive (or reactive), multi-agent scenarios in a manner portable to any simulator. In SCENIC,
+      users can precisely model a stochastic environment in which an autonomous/semi-autonomous system oper-
+      ates, can perform a variety of design and analysis tasks, and can communicate them as interpretable programs.
+      SCENIC has a variety of demonstrated use cases, including synthetic data generation, data augmentation,
+      debugging and retraining and redesign of perception components, sim-to-real validation, testing safety of
+      autonomous system both in simulation and in the real world, training reinforcement learning agents in multi-
+      player settings, and more. To achieve these goals, SCENIC has been designed to be (i) intuitive to learn, (ii)
+      probabilistic to capture the uncertainty and stochasticity in the real world, (iii) simulator-agnostic, and (iv)
+      open-source and in the public domain for external members to contribute.
+    </p>
   </div>
 
-    <div class="container py-7 bg-orange">
-        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
-          Details & Schedule
-        </h2>
-        <br>
-        <div class="sched-div mb-2 center" id="Friday, Nov 13th">
-          <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
-            Monday, June 19th
-          </h4>
-          <p class="text-sm text-dark">
-            Time zone:	<a href="https://www.timeanddate.com/time/zone/canada/vancouver">PDT (Pacific Daylight Time)</a> <br>
-            Location: Vancouver Convention Center, <b>East 11</b> <br>
-            More details: <a href="https://cvpr.thecvf.com/virtual/2023/tutorial/18556"> CVPR tutorial page</a><br>
-            <font color="#9F000F"><b>NEWS:</b> recording available <a href="https://youtu.be/AxhjGR1WIv8">here</a>.</font>
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Details & Schedule
+    </h2>
+    <br>
+    <div class="sched-div mb-2 center" id="Friday, Nov 13th">
+      <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
+        Time: TBD
+      </h4>
+      <p class="text-sm text-dark">
+        Time zone: <a href="https://www.timeanddate.com/time/zone/usa/seattle">PDT (Pacific Daylight Time)</a> <br>
+        Location: Seattle Convention Center, <b>TBD</b> <br>
+        More details: <a href=""> CVPR tutorial page (TBD)</a><br>
+        <!-- <font color="#9F000F"><b>NEWS:</b> recording available <a href="https://youtu.be/AxhjGR1WIv8">here</a>.</font> -->
+      </p>
+      <ul class="list-timeline list-timeline-primary">
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">09:00 - 09:30</span> - <i><b>Opening Remark and Motivation for the Tutorial</b>: On the challenges of achieving safe AI-
+              based autonomy and generating and curating data to support the design life cycles of (semi-)autonomous
+              systems</i>
           </p>
-          <ul class="list-timeline list-timeline-primary">
-            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
-              <p class="my-0 text-dark flex-fw text-sm">
-                <span class="text-inverse op-8">08:30 - 09:10</span> - <i>Setting the stage: Visual objects in scene understanding </i>
-                by <a href="https://ptrckprz.github.io/">Patrick Pérez</a>
-              </p>
-            </li>
-            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
-              <p class="my-0 text-dark flex-fw text-sm">
-                <span class="text-inverse op-8">09:10 - 10:00</span> - <i>Exploiting self-supervised features: unsupervised object localization</i> 
-                by <a href="https://osimeoni.github.io">Oriane Siméoni</a>
-              </p>
-            </li>
-            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
-              <p class="my-0 text-dark flex-fw text-sm">
-                <span class="text-inverse op-8">10:00 - 10:20</span> - Break</p>
-            </li>
-            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-4">
-              <p class="my-0 text-dark flex-fw text-sm">
-                <span class="text-inverse op-8">10:20 - 11:10</span> - <i> Self-supervised learning integrating object aware priors</i> 
-                by <a href="https://tkipf.github.io/">Thomas Kipf</a>
-              </p>
-            </li>
-            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
-              <p class="my-0 text-dark flex-fw text-sm">
-                <span class="text-inverse op-8">11:10 - 12:00</span> - <i>Discovering objects with multi-modal signals</i> 
-                  by <a href="https://weidixie.github.io/">Weidi Xie</a>
-                </p>
-            </li>
-            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
-              <p class="my-0 text-dark flex-fw text-sm">
-                <span class="text-inverse op-8">12:00 - 12:10</span> - Closing Remarks
-              </p>
-            </li>
-          </ul>
-        </div>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">09:30 - 10:20</span> - <i><b>Introduction to the SCENIC language</b>: We will use a range of examples to illustrate the various
+              features of SCENIC and their use cases</i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">10:20 - 10:40</span> - <i><b>Hands-On Programming with SCENIC</b>: We will prepare a colab notebook for attendees to
+              model and generate scenarios and ask any questions of SCENIC language</i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">10:40 - 10:50</span> - <i><b>Brief Break</b></i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse"
+          data-target="#day-1-item-4">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">10:50 - 11:20</span> - <i><b>Applications of SCENIC (Part 1)</b>: We will cover how to test perception, behavior prediction,
+              and planning components or the full autopilot stack in simulation with SCENIC using its support toolkit called
+              VERIFAI</i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse"
+          data-target="#day-1-item-4">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:20 - 11:50</span> - <i><b>Applications of SCENIC (Part 2)</b>: We will cover how to collect desired sensor data (e.g. RGB,
+              LiDAR) and labels (e.g. segmentation, 3D bounding boxes) using SCENIC, and how to perform sim-to-real
+              validation</i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse"
+          data-target="#day-1-item-4">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:50 - 12:00</span> - <i><b>Ongoing and Future Research Directions</b>: We will discuss novel applications of SCENIC,
+              including to mixed reality, and integrations of SCENIC with large language models</i>
+          </p>
+        </li>
+      </ul>
     </div>
+  </div>
 
-    <div class="container py-7 bg-orange">
-        <p class="text-sm text-dark text-center">For details, please contact <a href="mailto:ek65@eecs.berkeley.edu" style="font-weight: normal;">Edward Kim</a>.
-          <br>
-            Website template from <a href="https://github.com/osimeoni/object-localization-for-free" style="font-weight: normal;">Oriane Siméoni</a> from the <a href="https://osimeoni.github.io/object-localization-for-free/" style="font-weight: normal;">Object localization for free CVPR '23 tutorial</a>.
-          <br>
-            Last updated: 28th or March 2023
-        </p>
-    </div>
+  <div class="container py-7 bg-orange">
+    <p class="text-sm text-dark text-center">For details, please contact <a href="mailto:ek65@eecs.berkeley.edu"
+        style="font-weight: normal;">Edward Kim</a>.
+      <br>
+      Website template by <a href="https://github.com/osimeoni"
+        style="font-weight: normal;">Oriane Siméoni</a> from the <a
+        href="https://osimeoni.github.io/object-localization-for-free/" style="font-weight: normal;">Object localization
+        for free CVPR '23 tutorial</a>.
+      <br>
+      Last updated: 5th of March 2024
+    </p>
+  </div>
 
-  </body>
+</body>
 
 </html>

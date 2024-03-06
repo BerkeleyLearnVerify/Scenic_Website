@@ -400,6 +400,7 @@ h4{
     width: 120px;
     border-radius: 50%;
     height: 120px;
+    object-fit: cover;
     border: 10px solid rgba(255,255,255,0.1);
 }
 .single-bod h3 {
