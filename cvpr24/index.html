@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <meta name="description" content="CVPR23 Tutorial - Object localization for free">
+    <meta name="author" content="Oriane Siméoni">
+    <link rel="image_src" href="img/CVPR2023.png" />
+
+    <!-- Meta properties -->
+    <meta property="og:title" content="CVPR23 Tutorial - Object localization for free">
+    <meta property="og:description" content="Presentation of the CVPR23 tutorial">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://osimeoni.github.io/object-localization-for-free//">
+    <meta property="og:image" content="img/CVPR2023.png"/>
+
+    <title>CVPR23 Tutorial - Object localization for free</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- Custom styles for this template -->
+    <link href="main.css" rel="stylesheet">
+
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+  </head>
+
+  <body>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+    
+    <section id="title">
+    <div class="container py-7 bg-orange">
+        <h1 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+            Object localization for free:<br>
+            Going beyond self-supervised learning
+        </h1>
+        <br>
+        <h2 class="text-sm text-dark text-center">
+          CVPR 2023 Tutorial
+        </h2>
+        <p class="text-sm text-dark text-center">
+          Monday, June 19th 2023 - Vancouver<br>
+          <a href="https://youtu.be/AxhjGR1WIv8"><i class="fa fa-youtube-play" style="font-size:48px;color:red"></i></a>
+        </p>
+    </div>
+    </section>
+
+    <section id="bod">
+    <div class="container bg-orange" >								
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+            Organizers
+        </h2>
+        <br>
+        <div class="row text-center">
+            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+                <div class="our-bod">
+                    <div class="single-bod">
+                        <a href="https://osimeoni.github.io">
+                            <img src="img/OS-crop.png" class="img-fluid cimg" alt="">
+                            <h3 class="text-bold text-name">Oriane Siméoni</h3>
+                        </a>
+                        <p class="text-institute">valeo.ai</p>
+                    </div>
+                </div>
+            </div><!--- END COL -->	
+            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.2s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.2s; animation-name: fadeInLeft;">
+                <div class="our-bod">
+                    <div class="single-bod">
+                        <a href="https://weidixie.github.io/">
+                            <img src="https://weidixie.github.io/images/weidi_photo.png" class="img-fluid" alt="">
+                            <h3 class="text-bold text-name">Weidi Xie</h3>
+                        </a>
+                        <p class="text-institute">Shanghai Jiao Tong University</p>
+                    </div>						
+                </div>
+            </div><!--- END COL -->	
+            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.3s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.3s; animation-name: fadeInLeft;">
+                <div class="our-bod">
+                    <div class="single-bod">
+                        <a href="https://tkipf.github.io/">
+                            <img src="https://tkipf.github.io/images/photo.jpg" class="img-fluid" alt="">
+                            <h3 class="text-bold text-name">Thomas Kipf</h3>
+                        </a>
+                        <p class="text-institute">Google DeepMind</p>
+                    </div>					
+                </div>
+            </div><!--- END COL -->
+            <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.4s" data-wow-offset="0" style="visibility: visible; animation-duration: 1s; animation-delay: 0.4s; animation-name: fadeInLeft;">
+                <div class="our-bod">
+                    <div class="single-bod">
+                        <a href="https://ptrckprz.github.io/">
+                            <img src="https://ptrckprz.github.io/images/pat_closup.jpg" class="img-fluid" alt="">
+                            <h3 class="text-bold text-name">Patrick Pérez</h3>
+                        </a>
+                        <p class="text-institute">valeo.ai</p>
+                    </div>					
+                </div>
+            </div><!--- END COL -->	  
+        </div><!--- END ROW -->			
+    </div><!--- END CONTAINER -->
+    </section>
+
+    <div class="container py-7 bg-orange">
+      <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+          Summary
+      </h2>
+      <br>
+      <p class="text-sm text-dark centered-aligned">
+        Object localization in images is a key problem in a wide range of application domains that are embedded in critical settings such as self-driving vehicles or healthcare. However, most efficient solutions able to perform an object localization task follow the standard object detection and semantic segmentation frameworks, meaning that they require large amounts of annotated data for training. Different heuristics and tools can now assist and enhance human annotators, however manual annotation remains a largely heavy and expensive process. Moreover, perception models based on annotations enter a dependence circle of additional annotations for every new object class to detect or new external conditions to cover, e.g. in/outdoor, different times of the day, weathers. Such models struggle in dealing with our open complex world that is evolving continuously.
+      </p>
+      <p class="text-sm text-dark centered-aligned">
+        Recent works have shown exciting prospects of <i>avoiding annotations altogether</i> by <b>(1)</b> leveraging self-supervised features, <b>(2)</b> building self-supervised object-centric objectives and <b>(3)</b> combining different modalities. In this context, we propose a half-day tutorial in which we will provide an in-depth coverage of different angles on performing/building-upon object localization with no human supervision.
+      </p>
+  </div>
+
+    <div class="container py-7 bg-orange">
+        <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+          Details & Schedule
+        </h2>
+        <br>
+        <div class="sched-div mb-2 center" id="Friday, Nov 13th">
+          <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
+            Monday, June 19th
+          </h4>
+          <p class="text-sm text-dark">
+            Time zone:	<a href="https://www.timeanddate.com/time/zone/canada/vancouver">PDT (Pacific Daylight Time)</a> <br>
+            Location: Vancouver Convention Center, <b>East 11</b> <br>
+            More details: <a href="https://cvpr.thecvf.com/virtual/2023/tutorial/18556"> CVPR tutorial page</a><br>
+            <font color="#9F000F"><b>NEWS:</b> recording available <a href="https://youtu.be/AxhjGR1WIv8">here</a>.</font>
+          </p>
+          <ul class="list-timeline list-timeline-primary">
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm">
+                <span class="text-inverse op-8">08:30 - 09:10</span> - <i>Setting the stage: Visual objects in scene understanding </i>
+                by <a href="https://ptrckprz.github.io/">Patrick Pérez</a>
+              </p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm">
+                <span class="text-inverse op-8">09:10 - 10:00</span> - <i>Exploiting self-supervised features: unsupervised object localization</i> 
+                by <a href="https://osimeoni.github.io">Oriane Siméoni</a>
+              </p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm">
+                <span class="text-inverse op-8">10:00 - 10:20</span> - Break</p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse" data-target="#day-1-item-4">
+              <p class="my-0 text-dark flex-fw text-sm">
+                <span class="text-inverse op-8">10:20 - 11:10</span> - <i> Self-supervised learning integrating object aware priors</i> 
+                by <a href="https://tkipf.github.io/">Thomas Kipf</a>
+              </p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm">
+                <span class="text-inverse op-8">11:10 - 12:00</span> - <i>Discovering objects with multi-modal signals</i> 
+                  by <a href="https://weidixie.github.io/">Weidi Xie</a>
+                </p>
+            </li>
+            <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+              <p class="my-0 text-dark flex-fw text-sm">
+                <span class="text-inverse op-8">12:00 - 12:10</span> - Closing Remarks
+              </p>
+            </li>
+          </ul>
+        </div>
+    </div>
+
+    <div class="container py-7 bg-orange">
+        <p class="text-sm text-dark text-center">For details, please contact <a href="mailto:oriane.simeoni@valeo.com" style="font-weight: normal;">Oriane Siméoni</a>.
+            <br>
+            Last updated: 28th or March 2023
+        </p>
+    </div>
+
+  </body>
+
+</html>
