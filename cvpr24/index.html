@@ -52,12 +52,14 @@
   <section id="title">
     <div class="container py-7 bg-orange">
       <h1 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
-        SCENIC:<br>
-        An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy
+        SCENIC:
       </h1>
+      <h5 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy
+      </h5>
       <br>
       <h2 class="text-sm text-dark text-center">
-        CVPR 2024 Tutorial
+        CVPR 2024 Tutorial <br><br>
       </h2>
       <!-- <p class="text-sm text-dark text-center">
           Monday, June 19th 2024 - Seattle<br>
@@ -66,10 +68,24 @@
     </div>
   </section>
 
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Summary
+    </h2>
+    <br>
+    <p class="text-sm text-dark centered-aligned">
+      With the remarkable progress of artificial intelligence (AI) algorithms, the technologies that have been
+      deployed in real-world intelligent services rely on the applications of computer vision, speech, natural
+      language, big data analysis, and many other domains. This tutorial aims to bring together people from various
+      communities to learn about Scenic and its applications, and its role as a communal language facilitating world
+      modeling and data generation in simulation.
+    </p>
+  </div>
+
   <section id="bod">
     <div class="container bg-orange">
       <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
-        Organizers/Speakers
+        Speakers
       </h2>
       <br>
       <div class="row text-center">
@@ -95,6 +111,28 @@
             </div>
           </div>
         </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Edward_Kim.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Edward Kim</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </section>
+
+  <section id="bod">
+    <div class="container bg-orange">
+      <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Organizers
+      </h2>
+      <br>
+      <div class="row text-center">
         <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
           data-wow-offset="0"
           style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
@@ -178,30 +216,30 @@
 
   <div class="container py-7 bg-orange">
     <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
-      Summary
+      Overview
     </h2>
     <br>
     <p class="text-sm text-dark centered-aligned">
-      Today's autonomous systems rely heavily on the use of machine learning components trained on large
-      amounts of data. Even so, it is expensive to collect relevant data and test these systems in the real world
-      in a manner that captures typical data distributions and also covers edge cases. Therefore, simulators are
-      widely adopted in the robotics and computer vision community to train, test, and debug autonomous and
-      semi-autonomous systems. However, working directly with simulators can be too low-level and problem-
-      pecific. To support the design lifecycle of autonomous/semi-autonomous systems, one needs to raise the
-      level of abstraction above individual simulators and provide a formal framework for world modeling. Such a
-      world model can help reason about the safety of a system and facilitate data generation and sim-to-real vali-
-      dation, as well as help to interpret, validate, share, or re-use training and test scenarios across the community.
+      Today's autonomous systems rely heavily on the use of machine learning components trained on large amounts of
+      data. Even so, it is expensive to collect relevant data and test these systems in the real world in a manner that
+      captures typical data distributions and also covers edge cases. Therefore, simulators are widely adopted in the
+      robotics and computer vision community to train, test, and debug autonomous and semi-autonomous systems. However,
+      working directly with simulators can be too low-level and problem-specific. To support the design lifecycle of
+      autonomous/semi-autonomous systems, one needs to raise the level of abstraction above individual simulators and
+      provide a formal framework for world modeling. Such a world model can help reason about the safety of a system and
+      facilitate data generation and sim-to-real validation, as well as help to interpret, validate, share, or re-use
+      training and test scenarios across the community.
     </p>
     <p class="text-sm text-dark centered-aligned">
       The objective of this tutorial is to introduce SCENIC, an open-source, domain-specific probabilistic
       programming language for world modeling that addresses the above needs. SCENIC is designed to model and
       generate interactive (or reactive), multi-agent scenarios in a manner portable to any simulator. In SCENIC,
-      users can precisely model a stochastic environment in which an autonomous/semi-autonomous system oper-
-      ates, can perform a variety of design and analysis tasks, and can communicate them as interpretable programs.
+      users can precisely model a stochastic environment in which an autonomous/semi-autonomous system operates,
+      can perform a variety of design and analysis tasks, and can communicate them as interpretable programs.
       SCENIC has a variety of demonstrated use cases, including synthetic data generation, data augmentation,
       debugging and retraining and redesign of perception components, sim-to-real validation, testing safety of
-      autonomous system both in simulation and in the real world, training reinforcement learning agents in multi-
-      player settings, and more. To achieve these goals, SCENIC has been designed to be (i) intuitive to learn, (ii)
+      autonomous system both in simulation and in the real world, training reinforcement learning agents in multiplayer
+      settings, and more. To achieve these goals, SCENIC has been designed to be (i) intuitive to learn, (ii)
       probabilistic to capture the uncertainty and stochasticity in the real world, (iii) simulator-agnostic, and (iv)
       open-source and in the public domain for external members to contribute.
     </p>
@@ -225,20 +263,23 @@
       <ul class="list-timeline list-timeline-primary">
         <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
           <p class="my-0 text-dark flex-fw text-sm">
-            <span class="text-inverse op-8">09:00 - 09:30</span> - <i><b>Opening Remark and Motivation for the Tutorial</b>: On the challenges of achieving safe AI-
+            <span class="text-inverse op-8">09:00 - 09:30</span> - <i><b>Opening Remark and Motivation for the
+                Tutorial</b>: On the challenges of achieving safe AI-
               based autonomy and generating and curating data to support the design life cycles of (semi-)autonomous
               systems</i>
           </p>
         </li>
         <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
           <p class="my-0 text-dark flex-fw text-sm">
-            <span class="text-inverse op-8">09:30 - 10:20</span> - <i><b>Introduction to the SCENIC language</b>: We will use a range of examples to illustrate the various
+            <span class="text-inverse op-8">09:30 - 10:20</span> - <i><b>Introduction to the SCENIC language</b>: We
+              will use a range of examples to illustrate the various
               features of SCENIC and their use cases</i>
           </p>
         </li>
         <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
           <p class="my-0 text-dark flex-fw text-sm">
-            <span class="text-inverse op-8">10:20 - 10:40</span> - <i><b>Hands-On Programming with SCENIC</b>: We will prepare a colab notebook for attendees to
+            <span class="text-inverse op-8">10:20 - 10:40</span> - <i><b>Hands-On Programming with SCENIC</b>: We will
+              prepare a colab notebook for attendees to
               model and generate scenarios and ask any questions of SCENIC language</i>
           </p>
         </li>
@@ -250,15 +291,18 @@
         <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse"
           data-target="#day-1-item-4">
           <p class="my-0 text-dark flex-fw text-sm">
-            <span class="text-inverse op-8">10:50 - 11:20</span> - <i><b>Applications of SCENIC (Part 1)</b>: We will cover how to test perception, behavior prediction,
-              and planning components or the full autopilot stack in simulation with SCENIC using its support toolkit called
+            <span class="text-inverse op-8">10:50 - 11:20</span> - <i><b>Applications of SCENIC (Part 1)</b>: We will
+              cover how to test perception, behavior prediction,
+              and planning components or the full autopilot stack in simulation with SCENIC using its support toolkit
+              called
               VERIFAI</i>
           </p>
         </li>
         <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse"
           data-target="#day-1-item-4">
           <p class="my-0 text-dark flex-fw text-sm">
-            <span class="text-inverse op-8">11:20 - 11:50</span> - <i><b>Applications of SCENIC (Part 2)</b>: We will cover how to collect desired sensor data (e.g. RGB,
+            <span class="text-inverse op-8">11:20 - 11:50</span> - <i><b>Applications of SCENIC (Part 2)</b>: We will
+              cover how to collect desired sensor data (e.g. RGB,
               LiDAR) and labels (e.g. segmentation, 3D bounding boxes) using SCENIC, and how to perform sim-to-real
               validation</i>
           </p>
@@ -266,7 +310,8 @@
         <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column" data-toggle="collapse"
           data-target="#day-1-item-4">
           <p class="my-0 text-dark flex-fw text-sm">
-            <span class="text-inverse op-8">11:50 - 12:00</span> - <i><b>Ongoing and Future Research Directions</b>: We will discuss novel applications of SCENIC,
+            <span class="text-inverse op-8">11:50 - 12:00</span> - <i><b>Ongoing and Future Research Directions</b>: We
+              will discuss novel applications of SCENIC,
               including to mixed reality, and integrations of SCENIC with large language models</i>
           </p>
         </li>
@@ -278,9 +323,9 @@
     <p class="text-sm text-dark text-center">For details, please contact <a href="mailto:ek65@eecs.berkeley.edu"
         style="font-weight: normal;">Edward Kim</a>.
       <br>
-      Website template by <a href="https://github.com/osimeoni"
-        style="font-weight: normal;">Oriane Siméoni</a> from the <a
-        href="https://osimeoni.github.io/object-localization-for-free/" style="font-weight: normal;">Object localization
+      Website template by <a href="https://github.com/osimeoni" style="font-weight: normal;">Oriane Siméoni</a> from the
+      <a href="https://osimeoni.github.io/object-localization-for-free/" style="font-weight: normal;">Object
+        localization
         for free CVPR '23 tutorial</a>.
       <br>
       Last updated: 5th of March 2024
