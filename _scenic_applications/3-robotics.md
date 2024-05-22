@@ -1,4 +1,4 @@
 ---
 shortTitle: "Robotics"
-shortDescription: "Give description and show code of webots or gazebo simulator."
+shortDescription: "Give description and show code/example of webots or gazebo simulator."
 ---
