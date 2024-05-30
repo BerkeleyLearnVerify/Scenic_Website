@@ -1,4 +1,4 @@
 ---
-shortTitle: "Formal"
-shortDescription: "With a supporting toolkit, VerifAI, specify and verify system / component properties over the distributions of scenarios."
+shortTitle: "Formal & Compositional"
+shortDescription: "Compose complex scenarios from simpler ones, and, with the supporting VerifAI toolkit, seamlessly specify and verify AI-CPS."
 ---

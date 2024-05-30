@@ -1,4 +1,4 @@
 ---
-shortTitle: "Spatial/Temporal"
-shortDescription: "Model spatial and temporal constraints over the distributions of environments."
+shortTitle: "Spatio-Temporal"
+shortDescription: "Incorporate both spatial and temporal constraints over multi-agent AI-CPS and their environments."
 ---

@@ -1,4 +1,4 @@
 ---
 shortTitle: "Probabilistic"
-shortDescription: "Model distributions of physical environments with multiple objects and agents."
+shortDescription: "Model probability distributions, with precise semantics, over physical environments with multiple objects/agents and their attributes and behaviors."
 ---
