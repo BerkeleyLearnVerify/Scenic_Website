@@ -107,7 +107,10 @@
   <section class="nutshell">
     <div class="wrapper row">
       <div class="col-5 flex center">
-        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/driving.png')"></div>
+        <video width="400" height="300" controls>
+          <source src="{{ site.baseurl }}/resources/vids/autonomous-driving.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div class="col-7">
         <h3>{{site.scenic_applications[0].shortTitle}}</h3>
@@ -123,7 +126,7 @@
         <p>{{site.scenic_applications[1].shortDescription}}</p>
       </div>
       <div class="col-5 flex center">
-        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/xplane.png')"></div>
+        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/xplane.jpg')"></div>
       </div>
     </div>
   </section>
@@ -131,7 +134,10 @@
   <section class="nutshell">
     <div class="wrapper row">
       <div class="col-5 flex center">
-        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/webots.png')"></div>
+        <video width="400" height="300" controls>
+          <source src="{{ site.baseurl }}/resources/vids/robotics.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
       <div class="col-7">
         <h3>{{site.scenic_applications[2].shortTitle}}</h3>
@@ -147,11 +153,29 @@
         <p>{{site.scenic_applications[3].shortDescription}}</p>
       </div>
       <div class="col-5 flex center">
-        <div class="application-image-holder" style="background-image: url('resources/img/frontpage/soccer.png')"></div>
+        <video width="400" height="300" controls>
+          <source src="{{ site.baseurl }}/resources/vids/augmented-reality.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
     </div>
   </section>
-  
+
+  <section class="nutshell">
+    <div class="wrapper row">
+      <div class="col-5 flex center">
+        <video width="400" height="300" controls>
+          <source src="{{ site.baseurl }}/resources/vids/Reinforcement Learning.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div class="col-7">
+        <h3>{{site.scenic_applications[4].shortTitle}}</h3>
+        <p>{{site.scenic_applications[4].shortDescription}}</p>
+      </div>
+    </div>
+  </section>
+
   <!-- Talks/Papers -->
   <section class="nutshell-head">
     <div class="wrap">
@@ -164,9 +188,18 @@
             <div class="scenic-item">
               <div class="scenic-item_content">
                 <ul>
-                  <li><p><a href="https://scenic-lang.readthedocs.io/en/latest/publications.html">Publications Using Scenic</a></p></li>
-                  <li><p><a href="https://berkeleylearnverify.github.io/VerifiedAIWebsite/#talks">Research and Talks Using VerifAI</a></p></li>
-                  <li><p><a href="https://uva-mcps-lab.github.io/RV21/paper10.1.html">Formal Analysis of AI-Based Autonomy: From Modeling to Runtime Assurance RV '21 (Tutorial Video Included)</a></p></li>
+                  <li>
+                    <p><a href="https://scenic-lang.readthedocs.io/en/latest/publications.html">Publications Using
+                        Scenic</a></p>
+                  </li>
+                  <li>
+                    <p><a href="https://berkeleylearnverify.github.io/VerifiedAIWebsite/#talks">Research and Talks Using
+                        VerifAI</a></p>
+                  </li>
+                  <li>
+                    <p><a href="https://uva-mcps-lab.github.io/RV21/paper10.1.html">Formal Analysis of AI-Based
+                        Autonomy: From Modeling to Runtime Assurance RV '21 (Tutorial Video Included)</a></p>
+                  </li>
                 </ul>
               </div>
             </div>

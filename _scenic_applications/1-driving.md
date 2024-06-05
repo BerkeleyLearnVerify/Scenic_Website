@@ -1,4 +1,4 @@
 ---
 shortTitle: "Autonomous Vehicles"
-shortDescription: "Give description and show code/example of either carla, driving domain, or gta simulator."
+shortDescription: "With Scenic, one can model variations of dynamic and stochastic multi-agent interactions between an autopilot and traffic participants such as pedestrians, cyclists, etc. Scenic is an official scenario modeling language for [CARLA](https://carla.readthedocs.io/en/latest/tuto_G_scenic/) simulator."
 ---

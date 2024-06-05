@@ -1,4 +1,4 @@
 ---
 shortTitle: "Robotics"
-shortDescription: "Give description and show code/example of webots or gazebo simulator."
+shortDescription: "Scenic is interfaced to Gazebo simulator with the robot operating system (ROS) for testing and debugging."
 ---
