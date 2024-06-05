@@ -2,7 +2,7 @@
   url: https://scenic-lang.readthedocs.io/en/latest/quickstart.html#installation
 - title: Documentation
   url: https://scenic-lang.readthedocs.io/en/latest/index.html
-- title: Supported Simulators
+- title: Simulators
   url: https://scenic-lang.readthedocs.io/en/latest/simulators.html
 - title: VerifAI
   url: https://verifai.readthedocs.io/en/latest/
