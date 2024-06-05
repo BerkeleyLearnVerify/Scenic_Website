@@ -20,7 +20,7 @@ whyScenicTitle: "Why Scenic?"
 
 # Scenic use cases
 useCaseTitle: "Wide Range of Applications"
-useCaseIntroduction: "Proven use cases across multiple domains. We currently support several simulators by default in Scenic. If you have a new simulator you'd like to interface to Scenic, or a new application domain, let us know!"
+useCaseIntroduction: "Proven use cases across multiple domains. Scenic has built-in support for a variety of simulators and application domains."
 
 # Scenic papers/talks
 papersTitle: "Relevant Papers & Talks"

@@ -2,5 +2,5 @@
 shortTitle: "Robotics"
 ---
 <p>
-    Scenic is interfaced to Gazebo simulator with the robot operating system (ROS) for testing and debugging.
+    Scenic has been interfaced to the Webots and Gazebo simulators to train, test, and debug robots in a variety of applications.
 </p>
