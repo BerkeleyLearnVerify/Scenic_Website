@@ -11,7 +11,10 @@
     <div class="wrap">
       <!-- Navigation -->
       <nav class="navigation" role="menu">
-        <a href="{{ site.baseurl }}/" class="navigation-bdand">
+        <div class="navigation-bdand-vfill-lg hide-lg">
+          <!-- spacer to substitute for hidden logo, disappears below the large breakpoint -->
+        </div>
+        <a href="{{ site.baseurl }}/" class="navigation-bdand show-lg">
           <!-- show standard nav logo below the large breakpoint -->
           <img src="{{ site.baseurl }}/resources/img/frontpage/shape.svg" alt="" />
         </a>
@@ -34,7 +37,8 @@
       <!-- Inner Text -->
       <div class="col-lg-6">
         <div class="inner-text">
-          <h1>{{page.headerTitle}}</h1>
+          <!-- <h1>{{page.headerTitle}}</h1> -->
+          <div class="hero-logo hide-lg"></div>
           <h2>{{page.headerSubtitle}}</h2>
           <div class="button-row__container">
             <div class="button-row">
