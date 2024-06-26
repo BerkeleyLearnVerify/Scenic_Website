@@ -11,6 +11,9 @@ supporters:
   - name: iCyPhy
     logo: resources/img/frontpage/icyphy.png
     url: https://www.icyphy.org/
+  - name: TraCR
+    logo: resources/img/frontpage/tracr.png
+    url: https://www.clemson.edu/cecas/tracr/
 
 # maintainers:
 #   - name: Your maintainer
