@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="description"
+    content="2024 Scenic Workshop - Scenic: An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy">
+  <meta name="author" content="Daniel He">
+
+  <!-- Meta properties -->
+  <meta property="og:title"
+    content="2024 Scenic Workshop - Scenic: An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy">
+  <meta property="og:description" content="Presentation of the 2024 Scenic Workshop">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://scenic-lang.org/workshop24/">
+
+  <title>2024 Scenic Workshop - Scenic: An Open-Source Probabilistic Programming System for Data Generation and Safety
+    in
+    AI-Based Autonomy</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+    rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="main.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+  <section id="title">
+    <div class="container py-7 bg-orange">
+      <h1 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Scenic:
+      </h1>
+      <h5 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy
+      </h5>
+      <br>
+      <h2 class="text-sm text-dark text-center">
+        2024 Scenic Workshop <br><br>
+      </h2>
+    </div>
+  </section>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Abstract
+    </h2>
+    <br>
+    <p class="text-sm text-dark centered-aligned">
+      We invite you to join us on August 26-27 for a workshop for current and potential users and developers of the <a
+        href="https://scenic-lang.org">Scenic</a>
+      Scenic probabilistic programming language for world modeling and data generation for AI-based autonomy.
+      <br>
+      <br>
+      The workshop will be hosted at <a href="https://ucsc.edu/">UC Santa Cruz</a>, and will include food and housing
+      from dinner on August 25 through
+      lunch on August 28. The two main days of the workshop (26th and 27th) will provide hands-on tutorials on the
+      Scenic language, how to interface it to your simulator of choice, and Scenic's use cases for testing, debugging,
+      synthetic data generation, etc. We will also have breakout groups on topics of special interest such as Scenic's
+      internals and application domains including autonomous driving and robotics.
+    </p>
+  </div>
+
+  <section id="bod">
+    <div class="container bg-orange">
+      <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Flexible Scenario / Data Generation Across Different Domains
+      </h2>
+      <br>
+      <div class="row text-center" style="text-align:center; justify-content: center; align-items: center;">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Autonomous Vehicles</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/autonomous-driving.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Robotics</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/robotics.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+      <div class="row text-center" style="text-align:center; justify-content: center; align-items: center;">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute2"><b>Aviation</b></p>
+            <div class="single-bod">
+              <div class="image" style="background-image: url('img/xplane.jpg')"></div>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Reinforcement Learning</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/Reinforcement Learning.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Augmented Reality</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/rehab_preliminary_full_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </section>
+
+  <section id="bod">
+    <div class="container bg-orange">
+      <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Speakers
+      </h2>
+      <br>
+      <div class="row text-center" style="text-align:center; justify-content: center; align-items: center;">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Sanjit_Seshia.webp" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Sanjit Seshia</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Daniel_Fremont.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Daniel Fremont</h3>
+              <p class="text-institute">University of California, Santa Cruz</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Edward_Kim.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Edward Kim</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </section>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Overview
+    </h2>
+    <br>
+    <p class="text-sm text-dark centered-aligned">
+      Today's autonomous systems rely heavily on the use of machine learning components trained on large amounts of
+      data. Even so, it is expensive to collect relevant data and test these systems in the real world in a manner that
+      captures typical data distributions and also covers edge cases. Therefore, simulators are widely adopted in the
+      robotics and computer vision community to train, test, and debug autonomous and semi-autonomous systems. However,
+      working directly with simulators can be too low-level and problem-specific. To support the design lifecycle of
+      autonomous/semi-autonomous systems, one needs to raise the level of abstraction above individual simulators and
+      provide a formal framework for world modeling. Such a world model can help reason about the safety of a system and
+      facilitate data generation and sim-to-real validation, as well as help to interpret, validate, share, or re-use
+      training and test scenarios across the community.
+    </p>
+    <p class="text-sm text-dark centered-aligned">
+      The objective of this tutorial is to introduce Scenic, an open-source, domain-specific probabilistic
+      programming language for world modeling that addresses the above needs. Scenic is designed to model and
+      generate interactive (or reactive), multi-agent scenarios in a manner portable to any simulator. In Scenic,
+      users can precisely model a stochastic environment in which an autonomous/semi-autonomous system operates,
+      can perform a variety of design and analysis tasks, and can communicate them as interpretable programs.
+      Scenic has a variety of demonstrated use cases, including synthetic data generation, data augmentation,
+      debugging and retraining and redesign of perception components, sim-to-real validation, testing safety of
+      autonomous system both in simulation and in the real world, training reinforcement learning agents in multiplayer
+      settings, and more. To achieve these goals, Scenic has been designed to be (i) intuitive to learn, (ii)
+      probabilistic to capture the uncertainty and stochasticity in the real world, (iii) simulator-agnostic, and (iv)
+      open-source and in the public domain for external members to contribute.
+    </p>
+  </div>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Logistics
+    </h2>
+    <br>
+    <p class="text-sm text-dark centered-aligned">
+      We are looking forward to seeing you at the Scenic Workshop on Monday! Below you can find information on the
+      schedule and the logistics of attending virtually or in person. We also have two quick tasks for you:
+    </p>
+    <br>
+    <ol class="text-sm text-dark centered-aligned">
+      <li>Please fill out <a
+          href="https://docs.google.com/forms/d/e/1FAIpQLScIAI6XzxpKPlmmY2j_kVHWKtNNVhmU4FbABefCmLJWKWciuA/viewform?usp=sf_link">this
+          short form</a> by Thursday night so we can decide which application domains and topics to have
+        breakout sessions for on Tuesday.</li>
+      <li>We'll be doing 30-second introductions on Monday morning; if you'd like to be included, please fill out the
+        <a href=https://scenic-lang.org/workshop24/intro_slide.pptx>attached slide</a> before then (adding a picture of
+        yourself) and send it to me. Feel free to add any notes on how
+        your name should be pronounced.
+      </li>
+    </ol>
+    <p class="text-sm text-dark centered-aligned">
+      If you have any questions, just let me know! <a href="mailto:dfremont@ucsc.edu">dfremont@ucsc.edu</a>
+    </p>
+    <p class="text-sm text-dark centered-aligned">
+      <b>Virtual Attendance:</b>
+    </p>
+    <ul class="text-sm text-dark centered-aligned">
+      <li>On Zoom at <a href="https://ucsc.zoom.us/j/96002080851?pwd=2AQnT7KpXFPRhua8AotLgAsSL10bSb.1">this link</a>
+      </li>
+      <li>Hands-on sessions will have a member of the Scenic team in the Zoom room to answer questions</li>
+      <li>Other sessions will be recorded for those in different time zones</li>
+    </ul>
+    <p class="text-sm text-dark centered-aligned">
+      <b>In-Person Attendance:</b>
+    </p>
+    <ul class="text-sm text-dark centered-aligned">
+      <li>Location: <a href="https://maps.app.goo.gl/uupNBKr1J9zMHWUM9">Rachel Carson College</a>, UC Santa Cruz
+        (detailed map <a href="https://scenic-lang.org/workshop24/ScenicWorkshop2024Map.pdf">here</a>) </li>
+      <li>Check in/out: West Conference Office, 8 am - 8 pm (see map; contact us if arriving later)</li>
+      <li>Parking: Lot 162 (see map)</li>
+      <li>Main workshop room: Rachel Carson College Room 250 (see map)</li>
+      <li>Meals: Mostly in Rachel Carson Dining Hall (see map); non-dorm participants are welcome to attend after
+        checking in to receive meal cards.</li>
+      <li>More: <a href="https://conferenceservices.ucsc.edu/meeting/attendee.html">Conference Attendee Handbook</a>;
+        attendee <a href="https://conferenceservices.ucsc.edu/faqs/index.html">FAQs</a>; dining hall <a
+          href="https://nutrition.sa.ucsc.edu/">menus</a> </li>
+    </ul>
+  </div>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Schedule
+    </h2>
+    <br>
+    <div class="sched-div mb-2 center" id="Friday, Nov 13th">
+      <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
+        Sunday, August 25: (for those arriving the evening before the workshop)
+      </h4>
+      <ul class="list-timeline list-timeline-primary">
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">8:00 am - 8:00 pm</span>: Check in for parking permit, meal card, dorm room
+            key (West Conference Office)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">6:30 pm - 7:15 pm</span>: Dinner in Rachel Carson Dining Hall
+          </p>
+        </li>
+      </ul>
+      <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
+        Monday, August 26: (main workshop day 1)
+      </h4>
+      <ul class="list-timeline list-timeline-primary">
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">8:00 am - 8:00 pm</span>: Check in/out for parking permit, meal card, dorm
+            room key (West Conference Office)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">8:15 am</span>: Breakfast in Rachel Carson Dining Hall
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">9:00 am</span>: Opening, with introductions from participants (Rachel Carson
+            College Room 250)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">9:30 am</span>: Introduction to Scenic, tutorial on basic features for
+            static scenarios
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">10:30 am</span>: Coffee break
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:00 am</span>: Tutorial on Scenic for dynamic scenarios
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">12:00 pm</span>: Scenic installation help
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">12:30 pm</span>: Lunch at Rachel Carson Dining Hall
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">1:45 pm</span>: Hands-on lab session 1: Writing Scenic scenarios
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">3:15 pm</span>: Coffee break
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">3:45 pm</span>: Hands-on lab session 2: Scenic API & simulator interfaces
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">5:15 pm</span>: Free time / chat with the Scenic team
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">6:30 pm</span>: Dinner at Rachel Carson Dining Hall
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">7:30 pm</span>: Reception and “Crazy Ideas” Session (Rachel Carson College
+            Room 201)
+          </p>
+        </li>
+      </ul>
+      <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
+        Tuesday, August 27: (main workshop day 2)
+      </h4>
+      <ul class="list-timeline list-timeline-primary">
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">8:00 am - 8:00 pm</span>: Check out (West Conference Office)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">8:15 am</span>: Breakfast in Rachel Carson Dining Hall
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">9:00 am</span>: Opening, with Scenic case studies (Rachel Carson College
+            Room 250)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">9:30 am</span>: Parallel talks/discussions on application domains, e.g.
+            autonomous driving and robotics (please fill out the <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScIAI6XzxpKPlmmY2j_kVHWKtNNVhmU4FbABefCmLJWKWciuA/viewform?usp=sf_link">form</a>!)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">10:30 am</span>: Coffee break
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:00 am</span>: Overview of Scenic's internals
+          </p>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">12:30 pm</span>: Lunch at Rachel Carson Dining Hall
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">1:45 pm</span>: Parallel hands-on sessions on Scenic development topics
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">3:15 pm</span>: Coffee break
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">3:45 pm</span>: Parallel Scenic working group meetings
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">4:45 pm</span>: Plenary closing session
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">5:15 pm</span>: Main workshop ends
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">5:30 pm</span>: Free time / "Scenic" hike around campus
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">6:30 pm</span>: Dinner at <a
+              href="https://maps.app.goo.gl/aNQ2wi2vYnMqbrH76">College Nine/Lewis Dining Hall</a> (note different
+            location! hike will end there; shuttle also available)
+          </p>
+        </li>
+      </ul>
+      <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
+        Wednesday, August 28: (optional morning session)
+      </h4>
+      <ul class="list-timeline list-timeline-primary">
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">8:00 am - 8:00 pm</span>: Check out (West Conference Office)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">8:15 am</span>: Breakfast in College Nine/Lewis Dining Hall (note different location)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">9:30 am</span>: Scenic project next steps discussion
+            Room 250)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">10:30 am</span>: Coffee break
+            autonomous driving and robotics (please fill out the <a
+              href="https://docs.google.com/forms/d/e/1FAIpQLScIAI6XzxpKPlmmY2j_kVHWKtNNVhmU4FbABefCmLJWKWciuA/viewform?usp=sf_link">form</a>!)
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:00 am</span>: Free time / talk with the Scenic team
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">12:30 am</span>: Lunch at College Nine/Lewis Dining Hall (note different location)
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container py-7 bg-orange">
+    <p class="text-sm text-dark text-center">For details, please contact <a href="mailto:dfremont@ucsc.edu"
+        style="font-weight: normal;">Daniel Fremont</a>.
+      <br>
+      Website template by <a href="https://github.com/osimeoni" style="font-weight: normal;">Oriane Siméoni</a> from the
+      <a href="https://osimeoni.github.io/object-localization-for-free/" style="font-weight: normal;">Object
+        localization
+        for free CVPR '23 tutorial</a>.
+      <br>
+    </p>
+  </div>
+
+</body>
+
+</html>
