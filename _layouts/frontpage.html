@@ -1,6 +1,7 @@
 ---
 ---
 
+<!-- {% include navbar-inner.html %} -->
 {% include headertop.html %}
 {% include headerbottom.html %}
 
@@ -23,12 +24,23 @@
         </div>
         <ul class="navigation-menu">
           {% for navItem in site.data.nav-header %}
-          <li class="navigation-menu-item">
-            <a href="{{navItem.url}}">{{navItem.title}}</a>
-            {% if navItem.new %}
-            <span class="badge">NEW</span>
+            {% if navItem.dropdown %}
+              <li class="navigation-menu-item dropdown">
+                <a href="{{ navItem.url }}" class="dropdown-toggle alt" data-toggle="dropdown">{{ navItem.title }}</a>
+                <ul class="dropdown-menu">
+                  {% for item in navItem.items %}
+                    <li><a href="{{ item.url }}" {% if item.new %}class="new"{% endif %}>{{ item.title }}</a></li>
+                  {% endfor %}
+                </ul>
+              </li>
+            {% else %}
+              <li class="navigation-menu-item">
+                <a class="alt" href="{{ navItem.url }}" {% if page.url contains navItem.url %}class="active"{% endif %}>{{ navItem.title }}</a>
+                {% if navItem.new %}
+                <span class="badge">NEW</span>
+                {% endif %}
+              </li>
             {% endif %}
-          </li>
           {% endfor %}
         </ul>
       </nav>
@@ -186,7 +198,7 @@
   </section>
 
   <!-- Talks/Papers -->
-  <section class="nutshell-head">
+  <!-- <section class="nutshell-head">
     <div class="wrap">
       <div class="heading-line">
         <h2><span>{{page.papersTitle}}</span></h2>
@@ -216,7 +228,7 @@
         </div>
       </div>
     </div>
-  </section>
+  </section> -->
 
   <!-- Supporters -->
   <section class="maintenance">

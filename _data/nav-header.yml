@@ -8,8 +8,24 @@
   url: https://verifai.readthedocs.io/en/latest/
 - title: Community
   url: https://forum.scenic-lang.org/
-- title: CVPR'24
-  url: https://scenic-lang.org/cvpr24/
-- title: Workshop'24
-  url: https://scenic-lang.org/workshop24/
-  new: new
+- title: Learn More
+  url: "#"
+  dropdown: true
+  items:
+    - title: Publications
+      url: https://scenic-lang.readthedocs.io/en/latest/publications.html
+    - title: Talks
+      url: https://berkeleylearnverify.github.io/VerifiedAIWebsite/#talks
+    - title: Related Projects
+      url: /project1/
+- title: Events
+  url: "#"
+  dropdown: true
+  items:
+    - title: Workshop'24
+      url: https://scenic-lang.org/workshop24/
+      # new: new
+    - title: CVPR'24
+      url: https://scenic-lang.org/cvpr24/
+    - title: RV'21
+      url: https://uva-mcps-lab.github.io/RV21/paper10.1.html

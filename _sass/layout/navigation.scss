@@ -45,6 +45,7 @@
     .navigation-menu {
         .navigation-menu-item {
             display: inline-block;
+            position: relative;
 
             &:last-child {
                 margin-right: 0;
@@ -56,13 +57,82 @@
                 color: #fff;
                 border-radius: 300px;
                 font-weight: $font-bold;
+                font-size: 16px;
 
                 &:active,
                 &:focus,
-                &:hover,
-                &.active {
+                &:hover {
                     background: $brand-primary;
                     text-decoration: none;
+                }
+            }
+
+            a.alt {
+                padding: 5px 15px;
+                text-transform: uppercase;
+                color: #fff;
+                border-radius: 300px;
+                font-weight: $font-bold;
+                font-size: 18px;
+
+                &:active,
+                &:focus,
+                &:hover {
+                    background: $brand-primary;
+                    text-decoration: none;
+                }
+            }
+
+            &.dropdown {
+                > a {
+                    padding-right: 25px; // Adjust padding to make space for the arrow
+                }
+
+                > a::after {
+                    content: "▼";
+                    position: absolute;
+                    right: 10px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    font-size: 0.6em;
+                    color: #fff;
+                }
+
+                &:hover > .dropdown-menu {
+                    display: block;
+                }
+
+                .dropdown-toggle {
+                    cursor: pointer;
+                }
+
+                .dropdown-menu {
+                    display: none;
+                    position: absolute;
+                    top: 100%;
+                    left: 0;
+                    background-color: $brand-secondary;
+                    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                    z-index: 1;
+                    list-style: none;
+                    padding: 0;
+                    margin: 0;
+                    overflow: hidden; // Ensure the dropdown menu is properly contained
+                    min-width: 200px; // Set a minimum width for the dropdown menu
+
+                    li {
+                        a {
+                            padding: 10px 15px;
+                            color: #fff;
+                            display: block; // Ensure the anchor tags are block elements
+                            white-space: nowrap; // Prevent text from wrapping
+
+                            &:hover {
+                                background: $brand-primary;
+                                text-decoration: none;
+                            }
+                        }
+                    }
                 }
             }
         }
@@ -98,7 +168,7 @@
 
 .navigation-fade-screen {
     @include position(fixed, 0 0 0 0);
-    @include transition;
+    // @include transition;
     background: #000;
     opacity: 0;
     visibility: hidden;

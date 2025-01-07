@@ -14,7 +14,7 @@ body {
     @include font-smoothing(on);
 }
 * {
-  transition: $base-transition;
+  // transition: $base-transition;
 }
 
 h1,
