@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <meta name="description"
+    content="CPS 2025 - Scenic: An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy">
+  <meta name="author" content="Daniel He">
+
+  <!-- Meta properties -->
+  <meta property="og:title"
+    content="CPS25 Tutorial - Scenic: An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy">
+  <meta property="og:description" content="Presentation of the CPS25">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://scenic-lang.org/cps25/">
+
+  <title>CPS25 - Scenic: An Open-Source Probabilistic Programming System for Data Generation and Safety in
+    AI-Based Autonomy</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
+    rel="stylesheet" type="text/css">
+  <link
+    href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic"
+    rel="stylesheet" type="text/css">
+
+  <!-- Custom styles for this template -->
+  <link href="main.css" rel="stylesheet">
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+
+
+  <section id="title">
+    <div class="container py-7 bg-orange">
+      <h1 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Scenic:
+      </h1>
+      <h5 class="text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        An Open-Source Probabilistic Programming System for Data Generation and Safety in AI-Based Autonomy
+      </h5>
+      <br>
+      <h2 class="text-sm text-dark text-center">
+        CPS 2025 <br><br>
+      </h2>
+      <p class="text-sm text-dark text-center">
+        <iframe src="https://drive.google.com/file/d/1ZHGAlDWH19WANc89XVNUtYjpeDp_MgWQ/preview" width="640" height="360" allow="autoplay" allowfullscreen></iframe>
+      </p>
+    </div>
+  </section>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Abstract
+    </h2>
+    <br>
+    <p class="text-sm text-dark centered-aligned">
+      Autonomous systems, such as self-driving cars or intelligent robots, are increasingly operating in complex,
+      stochastic environments where they dynamically interact with multiple entities (human and robot). There is a need
+      to formally model and generate such environments in simulation, for use cases that span synthetic training data
+      generation and rigorous evaluation of safety. In this tutorial, we provide an in-depth tutorial on Scenic, a
+      simulator-agnostic probabilistic programming language to model complex multi-agent, physical environments with
+      stochasticity and spatio-temporal constraints. Scenic has been used in a variety of domains such as self-driving,
+      aviation, indoor robotics, multi-agent systems, and augmented/virtual reality. Using Scenic and associated open
+      source tools, one can (1) model and sample from distributions with spatial and temporal constraints, (2) generate
+      synthetic data in a controlled, programmatic fashion to train and test machine learning components, (3) reason
+      about the safety of AI-enabled autonomous systems, (4) automatically find edge cases, (5) debug and root-cause
+      failures of AI components including for perception, and (6) bridge the sim-to-real gap in autonomous system
+      design. We will provide a hands-on tutorial on the basics of Scenic and its applications, how to create Scenic
+      programs and your own new applications on top of Scenic, and to interface the language to your simulator/renderer
+      of choice. For more information on Scenic, please visit the website: <a href="https://scenic-lang.org">
+        https://scenic-lang.org</a>.
+    </p>
+  </div>
+
+  <section id="bod">
+    <div class="container bg-orange">
+      <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Flexible Scenario / Data Generation Across Different Domains
+      </h2>
+      <br>
+      <div class="row text-center" style="text-align:center; justify-content: center; align-items: center;">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Autonomous Vehicles</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/autonomous-driving.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Robotics</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/robotics.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+      <div class="row text-center" style="text-align:center; justify-content: center; align-items: center;">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute2"><b>Aviation</b></p>
+            <div class="single-bod">
+              <div class="image" style="background-image: url('img/xplane.jpg')"></div>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Reinforcement Learning</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/Reinforcement Learning.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <p class="text-institute"><b>Augmented Reality</b></p>
+            <div class="single-bod">
+              <video controls>
+                <source src="img/vids/rehab_preliminary_full_demo.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </section>
+
+  <section id="bod">
+    <div class="container bg-orange">
+      <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Speakers
+      </h2>
+      <br>
+      <div class="row text-center" style="text-align:center; justify-content: center; align-items: center;">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Sanjit_Seshia.webp" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Sanjit Seshia</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Daniel_Fremont.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Daniel Fremont</h3>
+              <p class="text-institute">University of California, Santa Cruz</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Edward_Kim.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Edward Kim</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </section>
+
+  <section id="bod">
+    <div class="container bg-orange">
+      <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+        Organizers
+      </h2>
+      <br>
+      <div class="row text-center" style="text-align:center; justify-content: center; align-items: center;">
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Edward_Kim.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Edward Kim</h3>
+              <p class="text-institute">University of California, Berkeley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Jinkyu_Kim.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Jinkyu Kim</h3>
+              <p class="text-institute">Korea University, South Korea</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Necmiye_Ozay.webp" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Necmiye Ozay</h3>
+              <p class="text-institute">University of Michigan, Ann Arbor</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Parasara Sridhar Duggirala.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Parasara Sridhar Duggirala</h3>
+              <p class="text-institute">University of North Carolina, Chapel Hill</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Hazem_Torfah.png" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Hazem Torfah</h3>
+              <p class="text-institute">Chalmers University of Technology, Sweden</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Kimin_Lee.png" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Kimin Lee</h3>
+              <p class="text-institute">School of AI, KAIST, South Korea</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+        <div class="col-lg-3 col-sm-3 col-xs-12 wow fadeInLeft" data-wow-duration="1s" data-wow-delay="0.1s"
+          data-wow-offset="0"
+          style="visibility: visible; animation-duration: 1s; animation-delay: 0.1s; animation-name: fadeInLeft;">
+          <div class="our-bod">
+            <div class="single-bod">
+              <img src="img/Marcell_Vazequez_Chanlatte.jpeg" class="img-fluid cimg" alt="">
+              <h3 class="text-bold text-name">Marcell Vazquez-Chanlatte</h3>
+              <p class="text-institute">Nissan's Alliance Innovation Lab, Silicon Valley</p>
+            </div>
+          </div>
+        </div><!--- END COL -->
+      </div><!--- END ROW -->
+    </div><!--- END CONTAINER -->
+  </section>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Overview
+    </h2>
+    <br>
+    <p class="text-sm text-dark centered-aligned">
+      Today's autonomous systems rely heavily on the use of machine learning components trained on large amounts of
+      data. Even so, it is expensive to collect relevant data and test these systems in the real world in a manner that
+      captures typical data distributions and also covers edge cases. Therefore, simulators are widely adopted in the
+      robotics and computer vision community to train, test, and debug autonomous and semi-autonomous systems. However,
+      working directly with simulators can be too low-level and problem-specific. To support the design lifecycle of
+      autonomous/semi-autonomous systems, one needs to raise the level of abstraction above individual simulators and
+      provide a formal framework for world modeling. Such a world model can help reason about the safety of a system and
+      facilitate data generation and sim-to-real validation, as well as help to interpret, validate, share, or re-use
+      training and test scenarios across the community.
+    </p>
+    <p class="text-sm text-dark centered-aligned">
+      The objective of this tutorial is to introduce Scenic, an open-source, domain-specific probabilistic
+      programming language for world modeling that addresses the above needs. Scenic is designed to model and
+      generate interactive (or reactive), multi-agent scenarios in a manner portable to any simulator. In Scenic,
+      users can precisely model a stochastic environment in which an autonomous/semi-autonomous system operates,
+      can perform a variety of design and analysis tasks, and can communicate them as interpretable programs.
+      Scenic has a variety of demonstrated use cases, including synthetic data generation, data augmentation,
+      debugging and retraining and redesign of perception components, sim-to-real validation, testing safety of
+      autonomous system both in simulation and in the real world, training reinforcement learning agents in multiplayer
+      settings, and more. To achieve these goals, Scenic has been designed to be (i) intuitive to learn, (ii)
+      probabilistic to capture the uncertainty and stochasticity in the real world, (iii) simulator-agnostic, and (iv)
+      open-source and in the public domain for external members to contribute.
+    </p>
+  </div>
+
+  <div class="container py-7 bg-orange">
+    <h2 class="text-uppercase text-letter-spacing-xs my-0 text-primary font-weight-bold text-center">
+      Details & Schedule
+    </h2>
+    <br>
+    <div class="sched-div mb-2 center" id="Friday, Nov 13th">
+      <h4 class="mt-0 mb-2 text-dark op-8 font-weight-bold">
+        Time: June 17th, 9:00 AM-12:00 PM
+      </h4>
+      <p class="text-sm text-dark">
+        Time zone: <a href="https://www.timeanddate.com/time/zone/usa/seattle">PDT (Pacific Daylight Time)</a> <br>
+        Location: Seattle Convention Center, <b>Arch 307-308</b> <br>
+        <!-- <font color="#9F000F"><b>NEWS:</b> recording available <a href="https://youtu.be/AxhjGR1WIv8">here</a>.</font> -->
+      </p>
+      <p class="text-sm text-dark">
+        Here are the slides used in the tutorial: <a
+          href="https://scenic-lang.org/cvpr24/Scenic-CVPR24_Tutorial_Slides.pdf">Tutorial Slides (PDF)</a>
+      </p>
+      <ul class="list-timeline list-timeline-primary">
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">09:00 - 09:30</span> - <i><b>Opening Remark and Motivation for the
+                Tutorial</b>: On the challenges of achieving safe AI-
+              based autonomy and generating and curating data to support the design life cycles of (semi-)autonomous
+              systems</i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">09:30 - 10:45</span> - <i><b>Introduction to the Scenic language with
+                hands-on programming</b>: We will provide a tutorial on how to model dynamic, interactive, multi-agent
+              scenarios with hands-on programming in Google Colab notebooks.</i>
+          <ul>
+            <li><a href="https://colab.research.google.com/drive/1iD2I3MEPVsPaAjBlu_1V9jZOpYnk9AuQ">Notebook 1: Static
+                Scenarios</a></li>
+            <li><a href="https://colab.research.google.com/drive/1s27MzZ4RM2zZ-Pm3S7XNgFmp43_8klsW">Notebook 2: Dynamic
+                Scenarios</a></li>
+          </ul>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">10:45 - 11:00</span> - <i><b>Coffee Break</b></i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:00 - 11:25</span> - <i><b>Applications of Scenic (Part 1)</b>: We will
+              cover how to test perception, behavior prediction, and planning components or the full autopilot stack in
+              simulation with Scenic using its support toolkit called VERIFAI</i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:25 - 11:50</span> - <i><b>Applications of Scenic (Part 2)</b>: We will
+              cover how to collect desired sensor data (e.g. RGB, LiDAR) and labels (e.g. segmentation, 3D bounding
+              boxes) using Scenic, and how to perform sim-to-real validation</i>
+          </p>
+        </li>
+        <li class="list-timeline-item p-0 pb-3 pb-lg-4 d-flex flex-wrap flex-column">
+          <p class="my-0 text-dark flex-fw text-sm">
+            <span class="text-inverse op-8">11:50 - 12:00</span> - <i><b>Ongoing and Future Research Directions</b>: We
+              will discuss novel applications of Scenic,
+              including to mixed reality, and integrations of Scenic with large language models</i>
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container py-7 bg-orange">
+    <p class="text-sm text-dark text-center">For details, please contact <a href="mailto:ek65@eecs.berkeley.edu"
+        style="font-weight: normal;">Edward Kim</a>.
+      <br>
+      Website template by <a href="https://github.com/osimeoni" style="font-weight: normal;">Oriane Siméoni</a> from the
+      <a href="https://osimeoni.github.io/object-localization-for-free/" style="font-weight: normal;">Object
+        localization
+        for free CVPR '23 tutorial</a>.
+      <br>
+      Last updated: 4th of February 2025
+    </p>
+  </div>
+
+</body>
+
+</html>
