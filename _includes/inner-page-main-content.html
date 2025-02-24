@@ -2,10 +2,33 @@
 	<div class="wrap">
 		<div class="content-primary">
 			<div class="inner-box">
-				{{content}}
+				<p>{{page.intro}}</p>
+				<hr><hr><hr><hr><hr>
+
+				<h2>{{page.title1}}</h2>
+				<p2>{{page.citation1}}</p2>
+				<br><br>
+				<p>{{page.abstract1}}</p>
+				<video width="100%" height="auto" controls>
+					<source src="{{ site.baseurl }}/resources/vids/Dynamic_BT_final.mp4" type="video/mp4">
+					Your browser does not support the video tag.
+				</video>
+				<br><br>
+				<hr><hr><hr><hr><hr>
+
+				<h2>{{page.title2}}</h2>
+				<p2>{{page.citation2}}</p2>
+				<br><br>
+				<p>{{page.abstract2}}</p>
+				<img width="50%" height="auto" src="../resources/img/fuglmeyer.png">
+				<br><br>
+				<hr><hr><hr><hr><hr>
+
+
+				<!-- {{content}} -->
 			</div>
 		</div>
-		
+
 		<!-- TOC -->
 		{% include sidebar-toc.html %}
 	</div>
