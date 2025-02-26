@@ -5,6 +5,7 @@
 
 {% include navbar-inner.html %}
 
+<!-- TODO: rename the download related tags (used to be download page) -->
 <main id="inner-main" class="download-page select-language">
 
 <!-- Title -->
@@ -19,15 +20,22 @@
     <div class="inner-box download">
       <div class="main-download">
         <div class="recommended-install">
-          <h2>Lorem Ipsum <span style="font-weight: bold;">Lorem Ipsum</span> (Lorem Ipsum)</h2>
+          <h2><u><a href="https://scenic-lang.org/projects/scenicxr/"><span style="font-weight: bold;">
+              {{page.project1_title}}
+            </span></a></u></h2>
           <div>
             <div class="text-step">
-              <p>Lorem ipsum dolor sit amet <code>Lorem Ipsum</code>,
-                consectetur adipiscing elit. Nam condimentum metus et arcu vehicula semper at sit amet nibh. 
-                Mauris rutrum arcu quis sapien faucibus, sed congue orci accumsan.
+              <p>
+                {{page.project1_description}}
               </p>
             </div>
           </div>
+          <video width="100%" height="auto" controls>
+            <source src="{{ site.baseurl }}/resources/vids/Dynamic_BT_final.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+          <br><br>
+				  <hr><hr><hr><hr><hr>
         </div>
       </div>
     </div>

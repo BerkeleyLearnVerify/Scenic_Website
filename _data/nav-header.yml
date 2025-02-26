@@ -17,9 +17,7 @@
     - title: Talks
       url: https://berkeleylearnverify.github.io/VerifiedAIWebsite/#talks
     - title: Related Projects
-      url: /project1/
-    - title: ScenicXR
-      url: /scenicxr/
+      url: /projects/
 - title: Events
   url: "#"
   dropdown: true
