@@ -29,7 +29,7 @@ If you just need to build the website, add ```-f docker-compose_build-only.yml``
 env UID="$(id -u)" GID="$(id -g)" docker-compose up
 ```
 
-The generated site is available at `http://localhost:4000`.
+The generated site is available at `http://localhost:4000/Scenic_Website/`.
 
 When the website dependencies change (the content of the `Gemfile`),
 you have to re-build the Docker image:
