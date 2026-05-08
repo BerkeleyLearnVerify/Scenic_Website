@@ -26,7 +26,7 @@ By default, docker-compose will use the file docker-compose.yml which will build
 If you just need to build the website, add ```-f docker-compose_build-only.yml```
 
 ```
-env UID="$(id -u)" GID="$(id -g)" docker-compose up
+env UID="$(id -u)" GID="$(id -g)" docker compose up
 ```
 
 The generated site is available at `http://localhost:4000/Scenic_Website/`.
@@ -35,12 +35,12 @@ When the website dependencies change (the content of the `Gemfile`),
 you have to re-build the Docker image:
 
 ```
-env UID="$(id -u)" GID="$(id -g)" docker-compose up --build
+env UID="$(id -u)" GID="$(id -g)" docker compose up --build
 ```
 
 If you have problems with the Docker image or want to force the rebuild of the Docker image:
 ```
-env UID="$(id -u)" GID="$(id -g)" docker-compose build --no-cache
+env UID="$(id -u)" GID="$(id -g)" docker compose build --no-cache
 ```
 
 
