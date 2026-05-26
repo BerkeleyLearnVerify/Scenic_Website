@@ -22,9 +22,11 @@
   url: "#"
   dropdown: true
   items:
+    - title: Workshop'26
+      url: https://scenic-lang.org/workshop26/
+      new: new
     - title: Workshop'25
       url: https://scenic-lang.org/workshop25/
-      new: new
     - title: CPS'25
       url: https://scenic-lang.org/cps25/
     - title: Workshop'24
